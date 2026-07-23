@@ -1,6 +1,4 @@
 import { NextResponse } from "next/server";
-import { db } from "@/db";
-import { messages } from "@/db/schema";
 
 export async function POST(request: Request) {
   try {
@@ -8,8 +6,6 @@ export async function POST(request: Request) {
 
     const name = String(body.name ?? "").trim().slice(0, 120);
     const phone = String(body.phone ?? "").trim().slice(0, 32);
-    const courseInterest = String(body.courseInterest ?? "").trim().slice(0, 255);
-    const message = String(body.message ?? "").trim().slice(0, 2000);
 
     if (name.length < 2 || phone.length < 6) {
       return NextResponse.json(
@@ -18,12 +14,8 @@ export async function POST(request: Request) {
       );
     }
 
-    await db.insert(messages).values({
-      name,
-      phone,
-      courseInterest: courseInterest || null,
-      message: message || null,
-    });
+    // Mock database insertion since database integration is disabled
+    console.log("Contact form submitted:", body);
 
     return NextResponse.json({ ok: true }, { status: 201 });
   } catch {
