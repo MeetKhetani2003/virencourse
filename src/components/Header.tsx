@@ -1,0 +1,163 @@
+"use client";
+
+import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { EASE } from "./motion";
+import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_URL } from "@/content/courses";
+
+const NAV = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Courses", href: "/courses" },
+  { label: "Contact", href: "/contact" },
+];
+
+export function Header() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (y) => setScrolled(y > 32));
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  return (
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
+          scrolled
+            ? "border-b border-ink/10 bg-parchment/90 shadow-sm py-3 backdrop-blur-xl"
+            : "border-b border-transparent bg-transparent py-5"
+        }`}
+      >
+        <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 lg:px-10">
+          {/* Wordmark */}
+          <Link href="/" className="group flex items-center gap-3">
+            <span className="hidden h-9 w-9 items-center justify-center border border-gold/60 font-serif text-[13px] font-medium text-gold transition-colors duration-500 group-hover:bg-gold group-hover:text-ink sm:flex">
+              VS
+            </span>
+            <span className="font-serif text-lg font-medium tracking-[0.06em] text-ink">
+              Viren Surati
+              <span className="text-gold">.</span>
+            </span>
+          </Link>
+
+          {/* Desktop nav */}
+          <nav className="hidden items-center gap-9 md:flex">
+            {NAV.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`nav-link ${
+                  isActive(item.href) ? "is-active text-ink" : "text-mist hover:text-ink"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-4">
+            <Link
+              href="/contact"
+              className="btn btn-gold hidden px-5! py-2.5! md:inline-flex"
+            >
+              <span className="btn-wipe" />
+              <span className="relative">Book a Session</span>
+            </Link>
+
+            {/* Mobile toggle */}
+            <button
+              aria-label={open ? "Close menu" : "Open menu"}
+              onClick={() => setOpen((v) => !v)}
+              className="relative flex h-10 w-10 items-center justify-center md:hidden"
+            >
+              <span
+                className={`absolute h-px w-6 bg-ink transition-all duration-500 ${
+                  open ? "rotate-45" : "-translate-y-[4px]"
+                }`}
+              />
+              <span
+                className={`absolute h-px w-6 bg-ink transition-all duration-500 ${
+                  open ? "-rotate-45" : "translate-y-[4px]"
+                }`}
+              />
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Mobile overlay menu */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.45, ease: EASE }}
+            className="grain fixed inset-0 z-40 flex flex-col justify-between bg-parchment px-8 pb-12 pt-32 md:hidden"
+          >
+            <nav className="flex flex-col gap-2">
+              {NAV.map((item, i) => (
+                <motion.div
+                  key={item.href}
+                  initial={{ opacity: 0, y: 26 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 12 }}
+                  transition={{ duration: 0.6, ease: EASE, delay: 0.08 + i * 0.09 }}
+                >
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-baseline gap-4 border-b border-ink/10 py-4"
+                  >
+                    <span className="font-serif text-[11px] tracking-[0.25em] text-gold">
+                      0{i + 1}
+                    </span>
+                    <span className="font-serif text-4xl font-light text-ink">
+                      {item.label}
+                    </span>
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.6 }}
+              className="flex flex-col gap-5"
+            >
+              <p className="micro-label text-mist">Direct</p>
+              <a href={PHONE_TEL} className="font-serif text-xl text-ink">
+                {PHONE_DISPLAY}
+              </a>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-gold self-start"
+              >
+                <span className="btn-wipe" />
+                <span className="relative">WhatsApp Viren</span>
+                <ArrowUpRight className="btn-icon relative h-4 w-4" />
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
