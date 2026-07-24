@@ -76,11 +76,11 @@ export function CircularBadge({
             d="M 50,50 m -38,0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
           />
         </defs>
-        <text className="fill-cream/80 text-[7.4px] font-semibold uppercase" style={{ letterSpacing: "2.7px" }}>
+        <text className="fill-surface/80 text-[7.4px] font-semibold uppercase" style={{ letterSpacing: "2.7px" }}>
           <textPath href="#vs-circle">{text}</textPath>
         </text>
       </svg>
-      <span className="absolute inset-0 m-auto h-1.5 w-1.5 rounded-full bg-gold" />
+      <span className="absolute inset-0 m-auto h-1.5 w-1.5 rounded-full bg-primary" />
     </div>
   );
 }

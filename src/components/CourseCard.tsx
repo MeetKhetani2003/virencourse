@@ -5,7 +5,7 @@ import type { Course } from "@/content/courses";
 
 export function CourseCard({ course }: { course: Course }) {
   return (
-    <article className="group relative overflow-hidden rounded-[14px] border border-ink/10 bg-white/75 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_36px_70px_-34px_rgba(11,11,12,0.4)]">
+    <article className="group relative overflow-hidden rounded-[14px] border border-dark/10 bg-white/75 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_36px_70px_-34px_rgba(11,11,12,0.4)]">
       {/* Whole card is clickable */}
       <Link
         href={`/courses/${course.slug}`}
@@ -14,7 +14,7 @@ export function CourseCard({ course }: { course: Course }) {
       />
 
       {/* Image */}
-      <div className="duotone relative aspect-[16/10] overflow-hidden bg-ink-3">
+      <div className="relative aspect-[16/10] overflow-hidden bg-dark-3">
         <Image
           src={course.image.src}
           alt={course.image.alt}
@@ -30,36 +30,36 @@ export function CourseCard({ course }: { course: Course }) {
           {course.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-ink/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-mist"
+              className="rounded-full border border-dark/15 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-muted"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <h3 className="font-serif text-[1.45rem] font-medium leading-snug tracking-[-0.01em] text-ink">
+        <h3 className="font-serif text-[1.45rem] font-medium leading-snug tracking-[-0.01em] text-dark">
           {course.title}
         </h3>
 
-        <p className="font-serif text-[15px] italic leading-relaxed text-mist">
+        <p className="font-serif text-[15px] italic leading-relaxed text-muted">
           {course.hook}
         </p>
 
-        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12px] font-medium text-mist">
+        <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[12px] font-medium text-muted">
           {course.cardMeta.map((m, i) => (
             <span key={m} className="flex items-center gap-2.5">
-              {i > 0 && <span className="h-[3px] w-[3px] rounded-full bg-gold" />}
+              {i > 0 && <span className="h-[3px] w-[3px] rounded-full bg-primary" />}
               {m}
             </span>
           ))}
         </div>
 
-        <div className="mt-1 flex items-center justify-between border-t border-ink/10 pt-5">
-          <span className="link-draw text-gold">
+        <div className="mt-1 flex items-center justify-between border-t border-dark/10 pt-5">
+          <span className="link-draw text-primary">
             View Course
             <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" strokeWidth={1.75} />
           </span>
-          <span className="font-serif text-sm italic text-mist-light">
+          <span className="font-serif text-sm italic text-muted-light">
             {course.platform}
           </span>
         </div>

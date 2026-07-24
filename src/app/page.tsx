@@ -113,17 +113,17 @@ export default function HomePage() {
   return (
     <>
       {/* ————— 1 · HERO ————— */}
-      <section className="grain relative overflow-hidden bg-parchment pb-24 pt-36 text-ink lg:pb-32 lg:pt-44">
+      <section className="grain relative overflow-hidden bg-light pb-16 pt-24 text-dark lg:pb-32 lg:pt-44">
         {/* Ambient depth */}
-        <div className="pointer-events-none absolute -right-52 top-[-10%] h-[680px] w-[680px] rounded-full bg-gold/[0.15] blur-[140px]" />
-        <div className="pointer-events-none absolute -left-40 bottom-[-30%] h-[520px] w-[520px] rounded-full bg-gold/[0.1] blur-[120px]" />
+        <div className="pointer-events-none absolute -right-52 top-[-10%] h-[680px] w-[680px] rounded-full bg-primary/[0.15] blur-[140px]" />
+        <div className="pointer-events-none absolute -left-40 bottom-[-30%] h-[520px] w-[520px] rounded-full bg-primary/[0.1] blur-[120px]" />
 
-        <div className="relative mx-auto grid max-w-[1280px] items-center gap-16 px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-10">
+        <div className="relative mx-auto grid max-w-[1280px] items-center gap-10 px-6 lg:grid-cols-[1.08fr_0.92fr] lg:px-10">
           {/* Copy */}
           <div>
             <Reveal>
-              <p className="flex items-center gap-4 micro-label text-gold">
-                <span className="h-px w-10 bg-gold/70" />
+              <p className="flex items-center gap-4 micro-label text-primary">
+                <span className="h-px w-10 bg-primary/70" />
                 Certified NLP · Mind &amp; Memory Trainer
               </p>
             </Reveal>
@@ -133,22 +133,22 @@ export default function HomePage() {
               <MaskLine delay={0.3}>Master Your Voice.</MaskLine>
               <MaskLine delay={0.45}>
                 Own the{" "}
-                <em className="font-normal italic text-gold">Stage</em>.
+                <em className="font-normal italic text-primary">Stage</em>.
               </MaskLine>
             </h1>
 
             <Reveal delay={0.65}>
-              <p className="mt-8 max-w-xl text-[17px] leading-relaxed text-mist">
+              <p className="mt-8 max-w-xl text-[17px] leading-relaxed text-muted">
                 Certified NLP, Mind &amp; Memory Trainer helping{" "}
-                <span className="text-ink font-medium">100,000+ people</span> build
+                <span className="text-dark font-medium">100,000+ people</span> build
                 unshakeable confidence, sharper memory and powerful public
                 speaking — in Hindi, for real life.
               </p>
             </Reveal>
 
             <Reveal delay={0.8}>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Link href="/courses" className="btn btn-gold">
+              <div className="mt-6 flex flex-wrap items-center gap-4">
+                <Link href="/courses" className="btn btn-primary">
                   <span className="btn-wipe" />
                   <span className="relative">Explore Courses</span>
                   <ArrowRight className="btn-icon relative h-4 w-4" strokeWidth={1.75} />
@@ -166,10 +166,10 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={0.95}>
-              <div className="mt-12 flex items-center gap-3 text-[13px] text-mist">
-                <Star className="h-4 w-4 fill-gold text-gold" />
+              <div className="mt-8 flex items-center gap-3 text-[13px] text-muted">
+                <Star className="h-4 w-4 fill-primary text-primary" />
                 <span>
-                  <span className="font-semibold text-ink">4.3</span> instructor
+                  <span className="font-semibold text-dark">4.3</span> instructor
                   rating · 7 courses live · {PHONE_DISPLAY}
                 </span>
               </div>
@@ -180,8 +180,8 @@ export default function HomePage() {
           <Reveal delay={0.5} y={34} className="relative mx-auto w-full max-w-[440px]">
             <div className="relative">
               {/* Offset hairline arch frame */}
-              <div className="absolute -inset-4 rounded-t-full border border-gold/35" aria-hidden="true" />
-              <div className="duotone relative aspect-[3/4] overflow-hidden rounded-t-full bg-parchment-2">
+              <div className="absolute -inset-4 rounded-t-full border border-primary/35" aria-hidden="true" />
+              <div className="relative aspect-[3/4] overflow-hidden rounded-t-full bg-light-2">
                 <Image
                   src="/images/portrait-hero.png"
                   alt="Viren Surati speaking on stage under warm light — portrait placeholder"
@@ -199,11 +199,11 @@ export default function HomePage() {
               />
 
               {/* Floating stat card */}
-              <div className="absolute -bottom-8 -left-6 border border-gold/30 bg-parchment px-6 py-5 shadow-[0_24px_50px_-24px_rgba(0,0,0,0.6)] lg:-left-14">
-                <p className="font-serif text-2xl font-medium italic leading-tight text-ink">
+              <div className="absolute -bottom-8 -left-6 border border-primary/30 bg-light px-6 py-5 shadow-[0_24px_50px_-24px_rgba(0,0,0,0.6)] lg:-left-14">
+                <p className="font-serif text-2xl font-medium italic leading-tight text-dark">
                   7 years of training
                 </p>
-                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-mist">
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
                   100,000+ lives touched
                 </p>
               </div>
@@ -212,17 +212,17 @@ export default function HomePage() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="relative mx-auto mt-20 hidden max-w-[1280px] items-center gap-4 px-6 lg:flex lg:px-10">
-          <span className="flex h-9 w-[22px] items-start justify-center rounded-full border border-ink/20 pt-1.5">
-            <span className="h-1.5 w-[3px] animate-scroll-dot rounded-full bg-gold" />
+        <div className="relative mx-auto mt-12 hidden max-w-[1280px] items-center gap-4 px-6 lg:flex lg:px-10">
+          <span className="flex h-9 w-[22px] items-start justify-center rounded-full border border-dark/20 pt-1.5">
+            <span className="h-1.5 w-[3px] animate-scroll-dot rounded-full bg-primary" />
           </span>
-          <span className="micro-label text-mist">Scroll</span>
+          <span className="micro-label text-muted">Scroll</span>
         </div>
       </section>
 
       {/* ————— 2 · TRUST STRIP ————— */}
-      <section className="border-y border-ink/10 bg-white text-ink">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-2 divide-ink/10 px-6 max-lg:gap-y-10 max-lg:py-10 md:grid-cols-4 md:divide-x lg:px-10">
+      <section className="border-y border-dark/10 bg-white text-dark">
+        <div className="mx-auto grid max-w-[1280px] grid-cols-2 divide-dark/10 px-6 max-lg:gap-y-10 max-lg:py-10 md:grid-cols-4 md:divide-x lg:px-10">
           {[
             { to: STATS.peopleReached, suffix: "+", label: "People Reached" },
             { to: STATS.directStudents, suffix: "+", label: "Students Trained Directly" },
@@ -230,14 +230,14 @@ export default function HomePage() {
             { to: STATS.rating, decimals: 1, suffix: "★", label: "Instructor Rating" },
           ].map((stat, i) => (
             <Reveal key={stat.label} delay={i * 0.1} className="px-4 py-9 text-center md:py-11">
-              <p className="font-serif text-3xl font-light tracking-[-0.01em] text-ink md:text-[2.35rem]">
+              <p className="font-serif text-3xl font-light tracking-[-0.01em] text-dark md:text-[2.35rem]">
                 <CountUp
                   to={stat.to}
                   suffix={stat.suffix}
                   decimals={stat.decimals ?? 0}
                 />
               </p>
-              <p className="mt-2 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-mist">
+              <p className="mt-2 text-[10.5px] font-semibold uppercase tracking-[0.22em] text-muted">
                 {stat.label}
               </p>
             </Reveal>
@@ -246,11 +246,11 @@ export default function HomePage() {
       </section>
 
       {/* ————— 3 · ABOUT SNAPSHOT ————— */}
-      <section className="bg-parchment py-24 lg:py-36">
-        <div className="mx-auto grid max-w-[1280px] items-center gap-14 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24 lg:px-10">
+      <section className="bg-light py-16 lg:py-36">
+        <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24 lg:px-10">
           <Reveal className="relative mx-auto w-full max-w-[460px]">
-            <div className="absolute -inset-4 border border-gold/40" aria-hidden="true" />
-            <div className="duotone relative aspect-[4/5] overflow-hidden bg-parchment-2">
+            <div className="absolute -inset-4 border border-primary/40" aria-hidden="true" />
+            <div className="relative aspect-[4/5] overflow-hidden bg-light-2">
               <Image
                 src="/images/portrait-about.png"
                 alt="Viren Surati in a warm studio setting — portrait placeholder"
@@ -259,26 +259,26 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <p className="absolute -bottom-5 right-6 bg-white shadow-sm px-5 py-3 font-serif text-sm italic text-gold">
+            <p className="absolute -bottom-5 right-6 bg-white shadow-sm px-5 py-3 font-serif text-sm italic text-primary">
               “Technique se transformation.”
             </p>
           </Reveal>
 
           <div>
             <Reveal>
-              <p className="flex items-center gap-4 micro-label text-mist">
-                <span className="h-px w-10 bg-gold" />
+              <p className="flex items-center gap-4 micro-label text-muted">
+                <span className="h-px w-10 bg-primary" />
                 About Viren
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
+              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
                 A trainer who practises what he{" "}
-                <em className="italic text-gold">teaches</em>.
+                <em className="italic text-primary">teaches</em>.
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-7 max-w-xl text-[16.5px] leading-[1.85] text-mist">
+              <p className="mt-7 max-w-xl text-[16.5px] leading-[1.85] text-muted">
                 For over seven years, Viren Surati has done one thing — handed
                 ordinary people extraordinary tools for the mind. A Certified
                 NLP, Mind &amp; Memory Trainer and Public Speaking Coach, he has
@@ -298,16 +298,16 @@ export default function HomePage() {
                 ].map((badge) => (
                   <span
                     key={badge.label}
-                    className="inline-flex items-center gap-2 rounded-full border border-ink/15 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-ink"
+                    className="inline-flex items-center gap-2 rounded-full border border-dark/15 bg-white/60 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-dark"
                   >
-                    <badge.icon className="h-3.5 w-3.5 text-gold" strokeWidth={1.6} />
+                    <badge.icon className="h-3.5 w-3.5 text-primary" strokeWidth={1.6} />
                     {badge.label}
                   </span>
                 ))}
               </div>
             </Reveal>
             <Reveal delay={0.4}>
-              <Link href="/about" className="link-draw mt-10 text-ink">
+              <Link href="/about" className="link-draw mt-6 text-dark">
                 Read the Full Story
                 <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" strokeWidth={1.75} />
               </Link>
@@ -317,25 +317,25 @@ export default function HomePage() {
       </section>
 
       {/* ————— 4 · FEATURED COURSES ————— */}
-      <section className="border-t border-ink/10 bg-parchment py-24 lg:py-36">
+      <section className="border-t border-dark/10 bg-light py-16 lg:py-36">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <Reveal>
-                <p className="flex items-center gap-4 micro-label text-mist">
-                  <span className="h-px w-10 bg-gold" />
+                <p className="flex items-center gap-4 micro-label text-muted">
+                  <span className="h-px w-10 bg-primary" />
                   ( 04 ) — Featured Courses
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
-                <h2 className="mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
+                <h2 className="mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
                   Courses built from real{" "}
-                  <em className="italic text-gold">training experience</em>.
+                  <em className="italic text-primary">training experience</em>.
                 </h2>
               </Reveal>
             </div>
             <Reveal delay={0.2}>
-              <p className="max-w-xs font-serif text-base italic leading-relaxed text-mist">
+              <p className="max-w-xs font-serif text-base italic leading-relaxed text-muted">
                 Practical, transformation-focused courses in Hindi — no fluff,
                 no recycled theory.
               </p>
@@ -352,7 +352,7 @@ export default function HomePage() {
             ))}
           </CourseCarousel>
 
-          <Reveal delay={0.25} className="mt-12 text-center">
+          <Reveal delay={0.25} className="mt-8 text-center">
             <Link href="/courses" className="btn btn-outline-dark">
               <span className="btn-wipe" />
               <span className="relative">View All Courses</span>
@@ -363,36 +363,36 @@ export default function HomePage() {
       </section>
 
       {/* ————— 5 · METHODOLOGY ————— */}
-      <section className="grain relative overflow-hidden bg-parchment-2 py-24 text-ink lg:py-36">
-        <div className="pointer-events-none absolute left-1/2 top-[-20%] h-[560px] w-[820px] -translate-x-1/2 rounded-full bg-gold/[0.06] blur-[150px]" />
+      <section className="grain relative overflow-hidden bg-light-2 py-16 text-dark lg:py-36">
+        <div className="pointer-events-none absolute left-1/2 top-[-20%] h-[560px] w-[820px] -translate-x-1/2 rounded-full bg-primary/[0.06] blur-[150px]" />
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
           <Reveal>
-            <p className="flex items-center gap-4 micro-label text-gold">
-              <span className="h-px w-10 bg-gold" />
+            <p className="flex items-center gap-4 micro-label text-primary">
+              <span className="h-px w-10 bg-primary" />
               The Method
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] md:text-5xl">
               How a transformation{" "}
-              <em className="italic text-gold">actually</em> happens.
+              <em className="italic text-primary">actually</em> happens.
             </h2>
           </Reveal>
 
-          <div className="mt-16 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-4">
             {METHOD.map((item, i) => (
               <Reveal key={item.step} delay={0.1 + i * 0.11}>
-                <div className="group border-l border-ink/10 pl-7 transition-colors duration-500 hover:border-gold">
+                <div className="group border-l border-dark/10 pl-7 transition-colors duration-500 hover:border-primary">
                   <div className="flex items-center justify-between">
-                    <span className="font-serif text-4xl font-light text-gold/60 transition-colors duration-500 group-hover:text-gold">
+                    <span className="font-serif text-4xl font-light text-primary/60 transition-colors duration-500 group-hover:text-primary">
                       {item.step}
                     </span>
-                    <item.icon className="h-6 w-6 text-mist transition-all duration-500 group-hover:-translate-y-0.5 group-hover:text-gold" strokeWidth={1.3} />
+                    <item.icon className="h-6 w-6 text-muted transition-all duration-500 group-hover:-translate-y-0.5 group-hover:text-primary" strokeWidth={1.3} />
                   </div>
                   <h3 className="mt-7 font-serif text-[1.35rem] font-medium tracking-[-0.01em]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-[14.5px] leading-relaxed text-mist">
+                  <p className="mt-3 text-[14.5px] leading-relaxed text-muted">
                     {item.text}
                   </p>
                 </div>
@@ -403,31 +403,31 @@ export default function HomePage() {
       </section>
 
       {/* ————— 6 · WHY LEARN WITH VIREN ————— */}
-      <section className="bg-parchment py-24 lg:py-36">
+      <section className="bg-light py-16 lg:py-36">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <Reveal>
-            <p className="flex items-center gap-4 micro-label text-mist">
-              <span className="h-px w-10 bg-gold" />
+            <p className="flex items-center gap-4 micro-label text-muted">
+              <span className="h-px w-10 bg-primary" />
               Why Learn With Viren
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <h2 className="mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
+            <h2 className="mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
               Not motivation.{" "}
-              <em className="italic text-gold">Transformation.</em>
+              <em className="italic text-primary">Transformation.</em>
             </h2>
           </Reveal>
 
           {/* Shared-hairline pillar grid */}
-          <div className="mt-14 grid border-l border-t border-ink/10 md:grid-cols-2">
+          <div className="mt-10 grid border-l border-t border-dark/10 md:grid-cols-2">
             {PILLARS.map((pillar, i) => (
-              <Reveal key={pillar.title} delay={0.08 + i * 0.1} className="border-b border-r border-ink/10">
+              <Reveal key={pillar.title} delay={0.08 + i * 0.1} className="border-b border-r border-dark/10">
                 <div className="group h-full bg-white/0 p-9 transition-colors duration-500 hover:bg-white/70 lg:p-12">
-                  <pillar.icon className="h-7 w-7 text-gold" strokeWidth={1.3} />
-                  <h3 className="mt-6 font-serif text-2xl font-medium tracking-[-0.01em] text-ink">
+                  <pillar.icon className="h-7 w-7 text-primary" strokeWidth={1.3} />
+                  <h3 className="mt-6 font-serif text-2xl font-medium tracking-[-0.01em] text-dark">
                     {pillar.title}
                   </h3>
-                  <p className="mt-3 max-w-md text-[15px] leading-relaxed text-mist">
+                  <p className="mt-3 max-w-md text-[15px] leading-relaxed text-muted">
                     {pillar.text}
                   </p>
                 </div>
@@ -438,33 +438,33 @@ export default function HomePage() {
       </section>
 
       {/* ————— 7 · WHO THIS IS FOR ————— */}
-      <section className="bg-parchment-2 py-24 lg:py-36">
+      <section className="bg-light-2 py-16 lg:py-36">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <div className="text-center">
             <Reveal>
-              <p className="micro-label text-mist">Who This Is For</p>
+              <p className="micro-label text-muted">Who This Is For</p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mx-auto mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
+              <h2 className="mx-auto mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
                 Made for the moment{" "}
-                <em className="italic text-gold">you&apos;re</em> preparing for.
+                <em className="italic text-primary">you&apos;re</em> preparing for.
               </h2>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid gap-7 md:grid-cols-3">
+          <div className="mt-10 grid gap-7 md:grid-cols-3">
             {AUDIENCES.map((aud, i) => (
               <Reveal key={aud.label} delay={0.1 + i * 0.12}>
-                <div className="group h-full border border-ink/10 bg-parchment p-9 pt-10 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_32px_60px_-34px_rgba(11,11,12,0.35)]">
-                  <div className="h-px w-12 bg-gold transition-all duration-700 group-hover:w-20" />
-                  <p className="mt-7 flex items-center gap-2.5 micro-label text-mist">
-                    <aud.icon className="h-4 w-4 text-gold" strokeWidth={1.5} />
+                <div className="group h-full border border-dark/10 bg-light p-9 pt-6 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_32px_60px_-34px_rgba(11,11,12,0.35)]">
+                  <div className="h-px w-12 bg-primary transition-all duration-700 group-hover:w-20" />
+                  <p className="mt-7 flex items-center gap-2.5 micro-label text-muted">
+                    <aud.icon className="h-4 w-4 text-primary" strokeWidth={1.5} />
                     {aud.label}
                   </p>
-                  <h3 className="mt-4 font-serif text-[1.55rem] font-medium tracking-[-0.01em] text-ink">
+                  <h3 className="mt-4 font-serif text-[1.55rem] font-medium tracking-[-0.01em] text-dark">
                     {aud.title}
                   </h3>
-                  <p className="mt-4 text-[14.5px] leading-relaxed text-mist">
+                  <p className="mt-4 text-[14.5px] leading-relaxed text-muted">
                     {aud.text}
                   </p>
                 </div>
@@ -475,33 +475,33 @@ export default function HomePage() {
       </section>
 
       {/* ————— 8 · PROOF IN NUMBERS ————— */}
-      <section className="grain relative overflow-hidden border-y border-ink/10 bg-white py-24 text-ink lg:py-36">
-        <div className="pointer-events-none absolute -left-40 top-[-30%] h-[560px] w-[560px] rounded-full bg-gold/[0.07] blur-[130px]" />
+      <section className="grain relative overflow-hidden border-y border-dark/10 bg-white py-16 text-dark lg:py-36">
+        <div className="pointer-events-none absolute -left-40 top-[-30%] h-[560px] w-[560px] rounded-full bg-primary/[0.07] blur-[130px]" />
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div>
               <Reveal>
-                <p className="flex items-center gap-4 micro-label text-gold">
-                  <span className="h-px w-10 bg-gold" />
+                <p className="flex items-center gap-4 micro-label text-primary">
+                  <span className="h-px w-10 bg-primary" />
                   Proof, In Numbers
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
                 <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] md:text-5xl">
                   Seven years. One mission.{" "}
-                  <em className="italic text-gold">Measured in minds.</em>
+                  <em className="italic text-primary">Measured in minds.</em>
                 </h2>
               </Reveal>
             </div>
             <Reveal delay={0.2}>
-              <p className="max-w-xs text-[14px] leading-relaxed text-mist">
+              <p className="max-w-xs text-[14px] leading-relaxed text-muted">
                 Every number below is a classroom, a seminar hall, a webinar or
                 a stage — somewhere a mind learned to work differently.
               </p>
             </Reveal>
           </div>
 
-          <div className="mt-16 grid grid-cols-2 gap-y-14 border-t border-ink/10 pt-14 md:grid-cols-4 md:divide-x md:divide-ink/10">
+          <div className="mt-10 grid grid-cols-2 gap-y-14 border-t border-dark/10 pt-10 md:grid-cols-4 md:divide-x md:divide-dark/10">
             {[
               {
                 to: STATS.peopleReached,
@@ -530,7 +530,7 @@ export default function HomePage() {
               },
             ].map((stat, i) => (
               <Reveal key={stat.label} delay={i * 0.1} className="px-6 text-center first:pl-0 last:pr-0">
-                <p className="font-serif text-5xl font-light tracking-[-0.02em] text-ink lg:text-6xl">
+                <p className="font-serif text-5xl font-light tracking-[-0.02em] text-dark lg:text-6xl">
                   <CountUp
                     to={stat.to}
                     suffix={stat.suffix}
@@ -538,10 +538,10 @@ export default function HomePage() {
                     duration={2.4}
                   />
                 </p>
-                <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-gold">
+                <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">
                   {stat.label}
                 </p>
-                <p className="mx-auto mt-2 max-w-[190px] text-[12.5px] leading-relaxed text-mist">
+                <p className="mx-auto mt-2 max-w-[190px] text-[12.5px] leading-relaxed text-muted">
                   {stat.note}
                 </p>
               </Reveal>
@@ -551,20 +551,20 @@ export default function HomePage() {
       </section>
 
       {/* ————— 9 · FINAL CTA ————— */}
-      <section className="grain relative overflow-hidden bg-parchment py-28 text-center text-ink lg:py-40">
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[460px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/[0.08] blur-[130px]" />
+      <section className="grain relative overflow-hidden bg-light py-20 text-center text-dark lg:py-40">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[460px] w-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.08] blur-[130px]" />
         <div className="relative mx-auto max-w-3xl px-6">
           <Reveal>
-            <p className="micro-label text-gold">Begin</p>
+            <p className="micro-label text-primary">Begin</p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-7 font-serif text-[clamp(2.4rem,5.4vw,4.2rem)] font-light leading-[1.08] tracking-[-0.02em]">
               Your transformation starts with{" "}
-              <em className="italic text-gold">one conversation</em>.
+              <em className="italic text-primary">one conversation</em>.
             </h2>
           </Reveal>
           <Reveal delay={0.25}>
-            <p className="mx-auto mt-7 max-w-md text-[15.5px] leading-relaxed text-mist">
+            <p className="mx-auto mt-7 max-w-md text-[15.5px] leading-relaxed text-muted">
               Message Viren directly on WhatsApp — it goes straight to his
               phone, whether you&apos;re choosing a course or just starting out.
             </p>
@@ -575,12 +575,12 @@ export default function HomePage() {
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-gold px-9! py-4!"
+                className="btn btn-primary px-9! py-4!"
               >
                 <span className="btn-wipe" />
                 <span className="relative">Message Viren on WhatsApp</span>
               </a>
-              <Link href="/courses" className="link-draw text-mist hover:text-ink">
+              <Link href="/courses" className="link-draw text-muted hover:text-dark">
                 Browse Courses
                 <ArrowRight className="h-4 w-4" strokeWidth={1.75} />
               </Link>

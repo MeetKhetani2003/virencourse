@@ -62,24 +62,24 @@ export default function AboutPage() {
   return (
     <>
       {/* ————— 1 · PAGE HERO ————— */}
-      <section className="grain relative overflow-hidden bg-ink pb-24 pt-36 text-cream lg:pb-32 lg:pt-44">
-        <div className="pointer-events-none absolute -right-40 top-[-15%] h-[600px] w-[600px] rounded-full bg-gold/[0.08] blur-[140px]" />
-        <div className="relative mx-auto grid max-w-[1280px] items-center gap-16 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
+      <section className="grain relative overflow-hidden bg-dark pb-16 pt-24 text-surface lg:pb-32 lg:pt-44">
+        <div className="pointer-events-none absolute -right-40 top-[-15%] h-[600px] w-[600px] rounded-full bg-primary/[0.08] blur-[140px]" />
+        <div className="relative mx-auto grid max-w-[1280px] items-center gap-10 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-10">
           <div>
             <Reveal>
-              <p className="flex items-center gap-4 micro-label text-gold">
-                <span className="h-px w-10 bg-gold/70" />
+              <p className="flex items-center gap-4 micro-label text-primary">
+                <span className="h-px w-10 bg-primary/70" />
                 The Trainer Behind the Training
               </p>
             </Reveal>
             <h1 className="mt-8 font-serif text-[clamp(2.9rem,6.5vw,5.6rem)] font-light leading-[1.04] tracking-[-0.02em]">
               <MaskLine delay={0.15}>Meet</MaskLine>
               <MaskLine delay={0.28}>
-                <em className="italic text-gold">Viren</em> Surati.
+                <em className="italic text-primary">Viren</em> Surati.
               </MaskLine>
             </h1>
             <Reveal delay={0.5}>
-              <p className="mt-8 max-w-lg text-[16.5px] leading-relaxed text-cream/60">
+              <p className="mt-8 max-w-lg text-[16.5px] leading-relaxed text-surface/60">
                 Certified NLP, Mind &amp; Memory Trainer · Public Speaking
                 Coach — teaching people across India how to remember more,
                 fear less and speak like they mean it.
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   (tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-cream/20 px-4 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-cream/65"
+                      className="rounded-full border border-surface/20 px-4 py-1.5 text-[10.5px] font-bold uppercase tracking-[0.18em] text-surface/65"
                     >
                       {tag}
                     </span>
@@ -102,8 +102,8 @@ export default function AboutPage() {
           </div>
 
           <Reveal delay={0.4} y={34} className="relative mx-auto w-full max-w-[560px]">
-            <div className="absolute -inset-4 border border-gold/30" aria-hidden="true" />
-            <div className="duotone relative aspect-[16/12] overflow-hidden bg-ink-3">
+            <div className="absolute -inset-4 border border-primary/30" aria-hidden="true" />
+            <div className="relative aspect-[16/12] overflow-hidden bg-dark-3">
               <Image
                 src="/images/seminar.png"
                 alt="Viren Surati addressing a seminar audience under warm stage light — placeholder photo"
@@ -122,27 +122,27 @@ export default function AboutPage() {
       </section>
 
       {/* ————— 2 · THE STORY SO FAR ————— */}
-      <section className="bg-parchment py-24 lg:py-36">
-        <div className="mx-auto grid max-w-[1280px] gap-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24 lg:px-10">
+      <section className="bg-light py-16 lg:py-36">
+        <div className="mx-auto grid max-w-[1280px] gap-10 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24 lg:px-10">
           <div>
             <Reveal>
-              <p className="flex items-center gap-4 micro-label text-mist">
-                <span className="h-px w-10 bg-gold" />
+              <p className="flex items-center gap-4 micro-label text-muted">
+                <span className="h-px w-10 bg-primary" />
                 The Story So Far
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
+              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
                 Seven years,{" "}
-                <em className="italic text-gold">100,000 minds</em>, one
+                <em className="italic text-primary">100,000 minds</em>, one
                 pattern.
               </h2>
             </Reveal>
           </div>
 
-          <div className="space-y-7 text-[16.5px] leading-[1.9] text-mist">
+          <div className="space-y-7 text-[16.5px] leading-[1.9] text-muted">
             <Reveal>
-              <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-[3.6rem] first-letter:leading-[0.85] first-letter:text-gold">
+              <p className="first-letter:float-left first-letter:mr-3 first-letter:font-serif first-letter:text-[3.6rem] first-letter:leading-[0.85] first-letter:text-primary">
                 It began with an observation. In classrooms and seminar halls
                 across India, Viren kept meeting the same person — bright,
                 hardworking, full of potential — held back not by a lack of
@@ -174,7 +174,7 @@ export default function AboutPage() {
               <p>
                 Today, with 7 courses live and a 4.3★ instructor rating from
                 learners on Udemy, the work has only scaled — the promise
-                hasn&apos;t changed: <em className="font-serif italic text-ink">practical,
+                hasn&apos;t changed: <em className="font-serif italic text-dark">practical,
                 life-changing technique over theory. Always.</em>
               </p>
             </Reveal>
@@ -183,19 +183,19 @@ export default function AboutPage() {
       </section>
 
       {/* ————— 3 · CREDENTIALS ————— */}
-      <section className="border-t border-ink/10 bg-parchment pb-24 lg:pb-36">
+      <section className="border-t border-dark/10 bg-light pb-16 lg:pb-36">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <div className="grid gap-7 md:grid-cols-3">
             {CREDENTIALS.map((cred, i) => (
               <Reveal key={cred.label} delay={0.1 + i * 0.12}>
-                <div className="group h-full border border-ink/10 bg-white/60 p-9 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_32px_60px_-34px_rgba(11,11,12,0.35)]">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold/50">
-                    <cred.icon className="h-5 w-5 text-gold" strokeWidth={1.4} />
+                <div className="group h-full border border-dark/10 bg-white/60 p-9 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:shadow-[0_32px_60px_-34px_rgba(11,11,12,0.35)]">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/50">
+                    <cred.icon className="h-5 w-5 text-primary" strokeWidth={1.4} />
                   </div>
-                  <h3 className="mt-7 font-serif text-[1.45rem] font-medium tracking-[-0.01em] text-ink">
+                  <h3 className="mt-7 font-serif text-[1.45rem] font-medium tracking-[-0.01em] text-dark">
                     {cred.label}
                   </h3>
-                  <p className="mt-3 text-[14.5px] leading-relaxed text-mist">
+                  <p className="mt-3 text-[14.5px] leading-relaxed text-muted">
                     {cred.text}
                   </p>
                 </div>
@@ -206,23 +206,23 @@ export default function AboutPage() {
       </section>
 
       {/* ————— 4 · STATS BAND ————— */}
-      <section className="grain relative overflow-hidden bg-ink py-24 text-cream lg:py-36">
-        <div className="pointer-events-none absolute -left-40 top-[-25%] h-[520px] w-[520px] rounded-full bg-gold/[0.07] blur-[130px]" />
+      <section className="grain relative overflow-hidden bg-dark py-16 text-surface lg:py-36">
+        <div className="pointer-events-none absolute -left-40 top-[-25%] h-[520px] w-[520px] rounded-full bg-primary/[0.07] blur-[130px]" />
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
           <Reveal>
-            <p className="flex items-center gap-4 micro-label text-gold">
-              <span className="h-px w-10 bg-gold" />
+            <p className="flex items-center gap-4 micro-label text-primary">
+              <span className="h-px w-10 bg-primary" />
               The Record
             </p>
           </Reveal>
           <Reveal delay={0.1}>
             <h2 className="mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] md:text-5xl">
               Trust is built in{" "}
-              <em className="italic text-gold">repetition</em>.
+              <em className="italic text-primary">repetition</em>.
             </h2>
           </Reveal>
 
-          <div className="mt-16 grid gap-y-14 border-t border-cream/10 pt-14 md:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-cream/10">
+          <div className="mt-10 grid gap-y-14 border-t border-surface/10 pt-10 md:grid-cols-2 lg:grid-cols-4 lg:divide-x lg:divide-surface/10">
             {STAT_BAND.map((stat, i) => (
               <Reveal key={stat.label} delay={i * 0.1} className="px-6 text-center first:pl-0 last:pr-0">
                 <p className="font-serif text-5xl font-light tracking-[-0.02em] lg:text-[3.4rem]">
@@ -233,10 +233,10 @@ export default function AboutPage() {
                     duration={2.4}
                   />
                 </p>
-                <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-gold">
+                <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-primary">
                   {stat.label}
                 </p>
-                <p className="mx-auto mt-2.5 max-w-[220px] text-[13px] leading-relaxed text-cream/50">
+                <p className="mx-auto mt-2.5 max-w-[220px] text-[13px] leading-relaxed text-surface/50">
                   {stat.note}
                 </p>
               </Reveal>
@@ -246,40 +246,40 @@ export default function AboutPage() {
       </section>
 
       {/* ————— 5 · TRAINING PHILOSOPHY ————— */}
-      <section className="bg-parchment-2 py-24 lg:py-36">
-        <div className="mx-auto grid max-w-[1280px] gap-14 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24 lg:px-10">
+      <section className="bg-light-2 py-16 lg:py-36">
+        <div className="mx-auto grid max-w-[1280px] gap-10 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24 lg:px-10">
           <div>
             <Reveal>
-              <p className="flex items-center gap-4 micro-label text-mist">
-                <span className="h-px w-10 bg-gold" />
+              <p className="flex items-center gap-4 micro-label text-muted">
+                <span className="h-px w-10 bg-primary" />
                 His Training Philosophy
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
+              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
                 Memory plus mind —{" "}
-                <em className="italic text-gold">taught as one</em>.
+                <em className="italic text-primary">taught as one</em>.
               </h2>
             </Reveal>
           </div>
 
           <div>
             <Reveal>
-              <blockquote className="border-l border-gold pl-8 font-serif text-2xl font-light italic leading-[1.55] text-ink lg:text-[1.75rem]">
+              <blockquote className="border-l border-primary pl-8 font-serif text-2xl font-light italic leading-[1.55] text-dark lg:text-[1.75rem]">
                 “A sharp memory gets you to the exam. A trained mind gets you
                 through it. Most training gives you one — this work is built
                 on giving you both.”
               </blockquote>
             </Reveal>
-            <div className="mt-10 space-y-6 text-[16px] leading-[1.85] text-mist">
+            <div className="mt-6 space-y-6 text-[16px] leading-[1.85] text-muted">
               <Reveal delay={0.08}>
                 <p>
                   Every Viren Surati program rests on a combined approach:
                   Memory Technique on one side, Scientific Mind Technique
-                  (NLP) on the other. Memory work trains <span className="text-ink">what you
+                  (NLP) on the other. Memory work trains <span className="text-dark">what you
                   retain</span> — how a table, a date, a long answer or a
                   speech gets encoded so it stays. Mind work trains{" "}
-                  <span className="text-ink">the state you perform from</span> — the confidence,
+                  <span className="text-dark">the state you perform from</span> — the confidence,
                   the self-image, the inner dialogue running underneath it
                   all.
                 </p>
@@ -300,43 +300,43 @@ export default function AboutPage() {
       </section>
 
       {/* ————— 6 · MISSION ————— */}
-      <section className="grain relative overflow-hidden bg-ink py-28 text-center text-cream lg:py-40">
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gold/[0.08] blur-[130px]" />
+      <section className="grain relative overflow-hidden bg-dark py-20 text-center text-surface lg:py-40">
+        <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.08] blur-[130px]" />
         <div className="relative mx-auto max-w-3xl px-6">
           <Reveal>
-            <span className="font-serif text-6xl leading-none text-gold">“</span>
+            <span className="font-serif text-6xl leading-none text-primary">“</span>
           </Reveal>
           <Reveal delay={0.12}>
             <p className="font-serif text-[clamp(1.9rem,4.4vw,3.2rem)] font-light leading-[1.28] tracking-[-0.015em]">
               My mission is simple — to help people{" "}
-              <em className="italic text-gold">worldwide</em> transform their
+              <em className="italic text-primary">worldwide</em> transform their
               lives through practical, life-changing techniques.
             </p>
           </Reveal>
           <Reveal delay={0.28}>
-            <p className="mt-9 font-serif text-lg italic text-cream/50">
+            <p className="mt-9 font-serif text-lg italic text-surface/50">
               Simple techniques. Seedhe shabd. Asli transformation.
             </p>
           </Reveal>
           <Reveal delay={0.4}>
-            <div className="mx-auto mt-10 h-px w-16 bg-gold/70" />
-            <p className="mt-5 micro-label text-cream/45">Viren Surati</p>
+            <div className="mx-auto mt-6 h-px w-16 bg-primary/70" />
+            <p className="mt-5 micro-label text-surface/45">Viren Surati</p>
           </Reveal>
         </div>
       </section>
 
       {/* ————— 7 · CTA BAND ————— */}
-      <section className="bg-parchment-2 py-24 lg:py-32">
+      <section className="bg-light-2 py-16 lg:py-32">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <Reveal>
-            <div className="border border-ink/10 bg-parchment px-8 py-14 text-center lg:py-20">
-              <p className="micro-label text-mist">Start Here</p>
-              <h2 className="mx-auto mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
+            <div className="border border-dark/10 bg-light px-8 py-10 text-center lg:py-20">
+              <p className="micro-label text-muted">Start Here</p>
+              <h2 className="mx-auto mt-6 max-w-2xl font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
                 Ready to start{" "}
-                <em className="italic text-gold">your</em> transformation?
+                <em className="italic text-primary">your</em> transformation?
               </h2>
-              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-                <Link href="/courses" className="btn btn-ink">
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+                <Link href="/courses" className="btn btn-dark">
                   <span className="btn-wipe" />
                   <span className="relative">Explore Courses</span>
                   <ArrowRight className="btn-icon relative h-4 w-4" strokeWidth={1.75} />

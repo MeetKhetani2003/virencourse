@@ -38,19 +38,19 @@ export function Header() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-700 ${
           scrolled
-            ? "border-b border-ink/10 bg-parchment/90 shadow-sm py-3 backdrop-blur-xl"
+            ? "border-b border-dark/10 bg-light/90 shadow-sm py-3 backdrop-blur-xl"
             : "border-b border-transparent bg-transparent py-5"
         }`}
       >
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 lg:px-10">
           {/* Wordmark */}
           <Link href="/" className="group flex items-center gap-3">
-            <span className="hidden h-9 w-9 items-center justify-center border border-gold/60 font-serif text-[13px] font-medium text-gold transition-colors duration-500 group-hover:bg-gold group-hover:text-ink sm:flex">
+            <span className="hidden h-9 w-9 items-center justify-center border border-primary/60 font-serif text-[13px] font-medium text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-dark sm:flex">
               VS
             </span>
-            <span className="font-serif text-lg font-medium tracking-[0.06em] text-ink">
+            <span className="font-serif text-lg font-medium tracking-[0.06em] text-dark">
               Viren Surati
-              <span className="text-gold">.</span>
+              <span className="text-primary">.</span>
             </span>
           </Link>
 
@@ -61,7 +61,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 className={`nav-link ${
-                  isActive(item.href) ? "is-active text-ink" : "text-mist hover:text-ink"
+                  isActive(item.href) ? "is-active text-dark" : "text-muted hover:text-dark"
                 }`}
               >
                 {item.label}
@@ -72,7 +72,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <Link
               href="/contact"
-              className="btn btn-gold hidden px-5! py-2.5! md:inline-flex"
+              className="btn btn-primary hidden px-5! py-2.5! md:inline-flex"
             >
               <span className="btn-wipe" />
               <span className="relative">Book a Session</span>
@@ -85,12 +85,12 @@ export function Header() {
               className="relative flex h-10 w-10 items-center justify-center md:hidden"
             >
               <span
-                className={`absolute h-px w-6 bg-ink transition-all duration-500 ${
+                className={`absolute h-px w-6 bg-dark transition-all duration-500 ${
                   open ? "rotate-45" : "-translate-y-[4px]"
                 }`}
               />
               <span
-                className={`absolute h-px w-6 bg-ink transition-all duration-500 ${
+                className={`absolute h-px w-6 bg-dark transition-all duration-500 ${
                   open ? "-rotate-45" : "translate-y-[4px]"
                 }`}
               />
@@ -107,7 +107,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease: EASE }}
-            className="grain fixed inset-0 z-40 flex flex-col justify-between bg-parchment px-8 pb-12 pt-32 md:hidden"
+            className="grain fixed inset-0 z-40 flex flex-col justify-between bg-light px-8 pb-8 pt-20 md:hidden"
           >
             <nav className="flex flex-col gap-2">
               {NAV.map((item, i) => (
@@ -121,12 +121,12 @@ export function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="flex items-baseline gap-4 border-b border-ink/10 py-4"
+                    className="flex items-baseline gap-4 border-b border-dark/10 py-4"
                   >
-                    <span className="font-serif text-[11px] tracking-[0.25em] text-gold">
+                    <span className="font-serif text-[11px] tracking-[0.25em] text-primary">
                       0{i + 1}
                     </span>
-                    <span className="font-serif text-4xl font-light text-ink">
+                    <span className="font-serif text-4xl font-light text-dark">
                       {item.label}
                     </span>
                   </Link>
@@ -140,15 +140,15 @@ export function Header() {
               transition={{ delay: 0.5, duration: 0.6 }}
               className="flex flex-col gap-5"
             >
-              <p className="micro-label text-mist">Direct</p>
-              <a href={PHONE_TEL} className="font-serif text-xl text-ink">
+              <p className="micro-label text-muted">Direct</p>
+              <a href={PHONE_TEL} className="font-serif text-xl text-dark">
                 {PHONE_DISPLAY}
               </a>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="btn btn-gold self-start"
+                className="btn btn-primary self-start"
               >
                 <span className="btn-wipe" />
                 <span className="relative">WhatsApp Viren</span>

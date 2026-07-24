@@ -1,15 +1,20 @@
-@import "tailwindcss";
+const fs = require('fs');
+const path = require('path');
+
+// 1. Rewrite globals.css completely
+const globalsCssPath = path.join(__dirname, 'src', 'app', 'globals.css');
+const newGlobalsCss = `@import "tailwindcss";
 
 @theme {
-  /* ——— Blue educational palette ——— */
-  --color-primary: #2563EB;
-  --color-primary-soft: #3B82F6;
+  /* ——— Teal & Slate educational palette ——— */
+  --color-primary: #00829B;
+  --color-primary-soft: #00B4D8;
   --color-dark: #0F172A;
-  --color-dark-2: #1E3A8A;
-  --color-dark-3: #1E40AF;
-  --color-light: #EFF6FF;
-  --color-light-2: #DBEAFE;
-  --color-surface: #BFDBFE;
+  --color-dark-2: #1E293B;
+  --color-dark-3: #334155;
+  --color-light: #FFFFFF;
+  --color-light-2: #F8FAFC;
+  --color-surface: #F1F5F9;
   --color-muted: #64748B;
   --color-muted-light: #94A3B8;
 
@@ -31,12 +36,12 @@
     0%,
     100% {
       box-shadow:
-        0 0 0 0 rgba(37, 99, 235, 0.4),
+        0 0 0 0 rgba(0, 130, 155, 0.4),
         0 14px 34px rgba(0, 0, 0, 0.35);
     }
     50% {
       box-shadow:
-        0 0 0 16px rgba(37, 99, 235, 0),
+        0 0 0 16px rgba(0, 130, 155, 0),
         0 14px 34px rgba(0, 0, 0, 0.35);
     }
   }
@@ -66,7 +71,7 @@
   }
 
   ::selection {
-    background: #2563EB;
+    background: #00829B;
     color: #FFFFFF;
   }
 
@@ -109,11 +114,11 @@
     @apply bg-primary text-white;
   }
   .btn-primary .btn-wipe {
-    background: #3B82F6;
+    background: #00B4D8;
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 38px -12px rgba(37, 99, 235, 0.55);
+    box-shadow: 0 16px 38px -12px rgba(0, 130, 155, 0.55);
   }
 
   .btn-dark {
@@ -166,7 +171,7 @@
     bottom: -2px;
     height: 1px;
     width: 100%;
-    background: #2563EB;
+    background: #00829B;
     transform: translateX(-50%) scaleX(0);
     transform-origin: center;
     transition: transform 0.5s var(--ease-elegant);
@@ -207,5 +212,59 @@
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
 
-
+  /* ——— Duotone treatment to unify mismatched imagery ——— */
+  .duotone img {
+    filter: sepia(0.1) saturate(1.2) contrast(1.1) brightness(0.98) hue-rotate(180deg);
+  }
+  .duotone::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      160deg,
+      rgba(0, 130, 155, 0.16) 0%,
+      rgba(15, 23, 42, 0.28) 100%
+    );
+    mix-blend-mode: multiply;
+  }
 }
+`;
+fs.writeFileSync(globalsCssPath, newGlobalsCss);
+console.log('globals.css updated');
+
+// 2. Find and replace tailwind classes in all files in src/ directory recursively.
+function replaceInDir(dir) {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const fullPath = path.join(dir, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      replaceInDir(fullPath);
+    } else if (fullPath.endsWith('.tsx') || fullPath.endsWith('.ts')) {
+      // Don't touch global css or node_modules obviously (already filtered by src and .tsx/.ts)
+      let content = fs.readFileSync(fullPath, 'utf8');
+
+      // Use word boundaries \b to avoid replacing substrings inside normal words
+      content = content.replace(/\bgold-soft\b/g, 'primary-soft');
+      content = content.replace(/\bgold\b/g, 'primary');
+
+      content = content.replace(/\bink-2\b/g, 'dark-2');
+      content = content.replace(/\bink-3\b/g, 'dark-3');
+      content = content.replace(/\bink\b/g, 'dark');
+
+      content = content.replace(/\bparchment-2\b/g, 'light-2');
+      content = content.replace(/\bparchment\b/g, 'light');
+
+      content = content.replace(/\bcream\b/g, 'surface');
+
+      content = content.replace(/\bmist-light\b/g, 'muted-light');
+      content = content.replace(/\bmist\b/g, 'muted');
+
+      fs.writeFileSync(fullPath, content);
+      console.log('Updated', fullPath);
+    }
+  }
+}
+
+replaceInDir(path.join(__dirname, 'src'));
+console.log('All TS/TSX files updated successfully.');

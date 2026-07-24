@@ -78,23 +78,23 @@ export default function CoursesPage() {
   return (
     <>
       {/* ————— 1 · PAGE HERO ————— */}
-      <section className="grain relative overflow-hidden bg-ink pb-20 pt-36 text-cream lg:pb-28 lg:pt-44">
-        <div className="pointer-events-none absolute -right-40 top-[-20%] h-[560px] w-[560px] rounded-full bg-gold/[0.08] blur-[140px]" />
+      <section className="grain relative overflow-hidden bg-dark pb-12 pt-24 text-surface lg:pb-28 lg:pt-44">
+        <div className="pointer-events-none absolute -right-40 top-[-20%] h-[560px] w-[560px] rounded-full bg-primary/[0.08] blur-[140px]" />
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
           <Reveal>
-            <p className="flex items-center gap-4 micro-label text-gold">
-              <span className="h-px w-10 bg-gold/70" />
+            <p className="flex items-center gap-4 micro-label text-primary">
+              <span className="h-px w-10 bg-primary/70" />
               The Course Library
             </p>
           </Reveal>
           <h1 className="mt-8 max-w-3xl font-serif text-[clamp(2.7rem,6vw,5rem)] font-light leading-[1.05] tracking-[-0.02em]">
             <MaskLine delay={0.15}>Learn from real</MaskLine>
             <MaskLine delay={0.28}>
-              training <em className="italic text-gold">experience</em>.
+              training <em className="italic text-primary">experience</em>.
             </MaskLine>
           </h1>
           <Reveal delay={0.5}>
-            <p className="mt-7 max-w-xl font-serif text-lg italic leading-relaxed text-cream/55">
+            <p className="mt-7 max-w-xl font-serif text-lg italic leading-relaxed text-surface/55">
               Practical, transformation-focused courses in Hindi — built from
               seven years on stage and in classrooms, not from theory.
             </p>
@@ -103,22 +103,22 @@ export default function CoursesPage() {
       </section>
 
       {/* ————— 2 + 3 · FILTER + GRID ————— */}
-      <section className="bg-parchment py-20 lg:py-28">
+      <section className="bg-light py-12 lg:py-28">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <CourseGrid />
         </div>
       </section>
 
       {/* ————— 4 · NOT SURE WHICH COURSE ————— */}
-      <section className="border-y border-cream/10 bg-ink-2 py-20 text-cream lg:py-28">
-        <div className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-10 px-6 lg:flex-row lg:items-center lg:px-10">
+      <section className="border-y border-surface/10 bg-dark-2 py-12 text-surface lg:py-28">
+        <div className="mx-auto flex max-w-[1280px] flex-col items-start justify-between gap-6 px-6 lg:flex-row lg:items-center lg:px-10">
           <Reveal>
-            <p className="micro-label text-gold">Guidance</p>
+            <p className="micro-label text-primary">Guidance</p>
             <h2 className="mt-5 max-w-xl font-serif text-3xl font-light leading-[1.15] tracking-[-0.015em] md:text-4xl">
               Not sure which course is{" "}
-              <em className="italic text-gold">right for you</em>?
+              <em className="italic text-primary">right for you</em>?
             </h2>
-            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-cream/55">
+            <p className="mt-4 max-w-md text-[15px] leading-relaxed text-surface/55">
               Tell Viren where you are — an exam, a presentation, a fear
               you&apos;re tired of — and he&apos;ll help you pick the right
               starting point.
@@ -131,7 +131,7 @@ export default function CoursesPage() {
               )}
               target="_blank"
               rel="noreferrer"
-              className="btn btn-gold px-8! py-4!"
+              className="btn btn-primary px-8! py-4!"
             >
               <span className="btn-wipe" />
               <span className="relative">Ask Viren on WhatsApp</span>
@@ -142,22 +142,22 @@ export default function CoursesPage() {
       </section>
 
       {/* ————— 5 · FAQ ————— */}
-      <section className="bg-parchment-2 py-20 lg:py-28">
-        <div className="mx-auto grid max-w-[1280px] gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-10">
+      <section className="bg-light-2 py-12 lg:py-28">
+        <div className="mx-auto grid max-w-[1280px] gap-8 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20 lg:px-10">
           <div>
             <Reveal>
-              <p className="flex items-center gap-4 micro-label text-mist">
-                <span className="h-px w-10 bg-gold" />
+              <p className="flex items-center gap-4 micro-label text-muted">
+                <span className="h-px w-10 bg-primary" />
                 Questions, Answered
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-ink md:text-5xl">
-                Before you <em className="italic text-gold">ask</em>.
+              <h2 className="mt-6 font-serif text-4xl font-light leading-[1.12] tracking-[-0.015em] text-dark md:text-5xl">
+                Before you <em className="italic text-primary">ask</em>.
               </h2>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-mist">
+              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-muted">
                 Anything else on your mind? A two-line WhatsApp message
                 usually gets you a personal answer the same day.
               </p>

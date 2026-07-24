@@ -46,33 +46,33 @@ const SOCIALS = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-white text-ink">
-      {/* Thin gold hairline at the very top edge */}
-      <div className="h-px w-full bg-gold/60" />
+    <footer className="relative bg-white text-dark">
+      {/* Thin primary hairline at the very top edge */}
+      <div className="h-px w-full bg-primary/60" />
 
-      <div className="mx-auto max-w-[1280px] px-6 pb-10 pt-20 lg:px-10 lg:pt-24">
-        <div className="grid gap-14 lg:grid-cols-[1.4fr_0.8fr_1fr]">
+      <div className="mx-auto max-w-[1280px] px-6 pb-6 pt-12 lg:px-10 lg:pt-24">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_0.8fr_1fr]">
           {/* Wordmark + tagline */}
           <div>
             <p className="font-serif text-3xl font-medium tracking-[0.05em]">
-              Viren Surati<span className="text-gold">.</span>
+              Viren Surati<span className="text-primary">.</span>
             </p>
-            <p className="mt-4 max-w-sm font-serif text-base italic leading-relaxed text-mist">
+            <p className="mt-4 max-w-sm font-serif text-base italic leading-relaxed text-muted">
               Train the mind. Sharpen the memory. Own the stage.
             </p>
-            <p className="mt-8 micro-label text-mist-light">
+            <p className="mt-8 micro-label text-muted-light">
               Certified NLP, Mind &amp; Memory Trainer — India
             </p>
           </div>
 
           {/* Quick links */}
           <nav className="flex flex-col items-start gap-4">
-            <p className="micro-label text-gold">Explore</p>
+            <p className="micro-label text-primary">Explore</p>
             {LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="link-draw text-[12px] font-semibold uppercase tracking-[0.18em] text-mist hover:text-ink"
+                className="link-draw text-[12px] font-semibold uppercase tracking-[0.18em] text-muted hover:text-dark"
               >
                 {link.label}
               </Link>
@@ -81,10 +81,10 @@ export function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col items-start gap-5">
-            <p className="micro-label text-gold">Reach Viren</p>
+            <p className="micro-label text-primary">Reach Viren</p>
             <a
               href={PHONE_TEL}
-              className="font-serif text-2xl text-ink transition-colors duration-300 hover:text-gold"
+              className="font-serif text-2xl text-dark transition-colors duration-300 hover:text-primary"
             >
               {PHONE_DISPLAY}
             </a>
@@ -104,7 +104,7 @@ export function Footer() {
                   key={social.label}
                   href={social.href}
                   aria-label={social.label}
-                  className="text-mist transition-all duration-300 hover:-translate-y-0.5 hover:text-gold"
+                  className="text-muted transition-all duration-300 hover:-translate-y-0.5 hover:text-primary"
                 >
                   <social.icon className="h-[19px] w-[19px]" strokeWidth={1.4} />
                 </a>
@@ -113,9 +113,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-3 border-t border-ink/10 pt-7 text-[12px] text-ink/40 sm:flex-row sm:items-center">
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-dark/10 pt-7 text-[12px] text-dark/40 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Viren Surati. All rights reserved.</p>
-          <p className="font-serif italic text-mist">
+          <p className="font-serif italic text-muted">
             100,000+ lives touched — one mind at a time.
           </p>
         </div>

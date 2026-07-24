@@ -38,7 +38,7 @@ export function CourseCarousel({ children }: { children: React.ReactNode }) {
 
   return (
     <div 
-      className="relative group w-full mt-14"
+      className="relative group w-full mt-10"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={() => setIsHovered(true)}
@@ -55,7 +55,7 @@ export function CourseCarousel({ children }: { children: React.ReactNode }) {
       <div className="absolute top-1/2 -translate-y-1/2 left-0 lg:-left-6 hidden md:flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-20">
         <button 
           onClick={() => scroll('left')}
-          className="p-3 rounded-full bg-ink/90 text-gold border border-gold/30 hover:bg-ink hover:text-white backdrop-blur-sm pointer-events-auto shadow-xl transition-all hover:scale-110"
+          className="p-3 rounded-full bg-dark/90 text-primary border border-primary/30 hover:bg-dark hover:text-white backdrop-blur-sm pointer-events-auto shadow-xl transition-all hover:scale-110"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -64,7 +64,7 @@ export function CourseCarousel({ children }: { children: React.ReactNode }) {
       <div className="absolute top-1/2 -translate-y-1/2 right-0 lg:-right-6 hidden md:flex items-center justify-center pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-20">
         <button 
           onClick={() => scroll('right')}
-          className="p-3 rounded-full bg-ink/90 text-gold border border-gold/30 hover:bg-ink hover:text-white backdrop-blur-sm pointer-events-auto shadow-xl transition-all hover:scale-110"
+          className="p-3 rounded-full bg-dark/90 text-primary border border-primary/30 hover:bg-dark hover:text-white backdrop-blur-sm pointer-events-auto shadow-xl transition-all hover:scale-110"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6" />

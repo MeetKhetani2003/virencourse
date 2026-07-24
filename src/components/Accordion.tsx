@@ -25,10 +25,10 @@ export function Accordion({
 }) {
   const [open, setOpen] = useState<string | null>(defaultOpen ?? null);
 
-  const hairline = onDark ? "border-cream/12" : "border-ink/12";
-  const heading = onDark ? "text-cream" : "text-ink";
-  const muted = onDark ? "text-cream/50" : "text-mist";
-  const iconColor = onDark ? "text-gold" : "text-gold";
+  const hairline = onDark ? "border-surface/12" : "border-dark/12";
+  const heading = onDark ? "text-surface" : "text-dark";
+  const muted = onDark ? "text-surface/50" : "text-muted";
+  const iconColor = onDark ? "text-primary" : "text-primary";
 
   return (
     <div className={`border-t ${hairline}`}>
@@ -45,7 +45,7 @@ export function Accordion({
               <span className="flex items-baseline gap-5">
                 <span
                   className={`font-serif text-lg font-medium tracking-[-0.01em] transition-colors duration-300 lg:text-[1.35rem] ${heading} ${
-                    isOpen ? "" : "group-hover:text-gold"
+                    isOpen ? "" : "group-hover:text-primary"
                   }`}
                 >
                   {item.header}
@@ -70,7 +70,7 @@ export function Accordion({
               }`}
             >
               <div className="overflow-hidden">
-                <div className={`pb-7 pr-10 ${onDark ? "text-cream/70" : "text-mist"}`}>
+                <div className={`pb-7 pr-6 ${onDark ? "text-surface/70" : "text-muted"}`}>
                   {item.body}
                 </div>
               </div>

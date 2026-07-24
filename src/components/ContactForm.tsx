@@ -7,9 +7,9 @@ import { COURSES, WHATSAPP_URL } from "@/content/courses";
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputCls =
-  "w-full border-b border-ink/20 bg-transparent pb-3 pt-2 font-serif text-lg text-ink outline-none transition-colors duration-500 placeholder:text-mist-light/70 focus:border-gold";
+  "w-full border-b border-dark/20 bg-transparent pb-3 pt-2 font-serif text-lg text-dark outline-none transition-colors duration-500 placeholder:text-muted-light/70 focus:border-primary";
 
-const labelCls = "micro-label text-mist";
+const labelCls = "micro-label text-muted";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -37,7 +37,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="flex min-h-[420px] flex-col items-center justify-center rounded-[14px] border border-ink/10 bg-white/70 px-8 py-16 text-center">
+      <div className="flex min-h-[420px] flex-col items-center justify-center rounded-[14px] border border-dark/10 bg-white/70 px-8 py-10 text-center">
         <svg viewBox="0 0 64 64" className="h-16 w-16">
           <motion.circle
             cx="32"
@@ -62,10 +62,10 @@ export function ContactForm() {
             transition={{ duration: 0.55, delay: 0.75, ease: [0.22, 1, 0.36, 1] }}
           />
         </svg>
-        <h3 className="mt-8 font-serif text-3xl font-medium text-ink">
+        <h3 className="mt-8 font-serif text-3xl font-medium text-dark">
           Thank you, {name.split(" ")[0] || "friend"}.
         </h3>
-        <p className="mt-3 max-w-sm text-mist">
+        <p className="mt-3 max-w-sm text-muted">
           Your message is with Viren — he&apos;ll get back to you shortly. In a
           hurry?
         </p>
@@ -73,7 +73,7 @@ export function ContactForm() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noreferrer"
-          className="link-draw mt-6 text-gold"
+          className="link-draw mt-6 text-primary"
         >
           WhatsApp him directly
         </a>
@@ -84,7 +84,7 @@ export function ContactForm() {
   return (
     <form
       onSubmit={onSubmit}
-      className="rounded-[14px] border border-ink/10 bg-white/70 p-8 lg:p-12"
+      className="rounded-[14px] border border-dark/10 bg-white/70 p-8 lg:p-12"
     >
       <div className="grid gap-9 sm:grid-cols-2">
         <label className="block">
@@ -139,11 +139,11 @@ export function ContactForm() {
         />
       </label>
 
-      <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
         <button
           type="submit"
           disabled={status === "sending"}
-          className="btn btn-ink disabled:opacity-60"
+          className="btn btn-dark disabled:opacity-60"
         >
           <span className="btn-wipe" />
           <span className="relative">
