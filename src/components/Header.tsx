@@ -33,6 +33,8 @@ export function Header() {
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
+  const isDarkHeader = !scrolled && pathname !== "/";
+
   return (
     <>
       <header
@@ -45,10 +47,14 @@ export function Header() {
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 lg:px-10">
           {/* Wordmark */}
           <Link href="/" className="group flex items-center gap-3">
-            <span className="hidden h-9 w-9 items-center justify-center border border-primary/60 font-serif text-[13px] font-medium text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-dark sm:flex">
+            <span className="hidden h-9 w-9 items-center justify-center border border-primary/60 font-serif text-[13px] font-medium text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-white sm:flex">
               VS
             </span>
-            <span className="font-serif text-lg font-medium tracking-[0.06em] text-dark">
+            <span
+              className={`font-serif text-lg font-medium tracking-[0.06em] transition-colors duration-300 ${
+                isDarkHeader ? "text-white" : "text-dark"
+              }`}
+            >
               Viren Surati
               <span className="text-primary">.</span>
             </span>
@@ -56,17 +62,26 @@ export function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-9 md:flex">
-            {NAV.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`nav-link ${
-                  isActive(item.href) ? "is-active text-dark" : "text-muted hover:text-dark"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV.map((item) => {
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`nav-link ${
+                    active
+                      ? isDarkHeader
+                        ? "is-active text-white font-semibold"
+                        : "is-active text-primary font-semibold"
+                      : isDarkHeader
+                      ? "text-white/70 hover:text-white"
+                      : "text-muted hover:text-dark"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-4">
@@ -85,13 +100,17 @@ export function Header() {
               className="relative flex h-10 w-10 items-center justify-center md:hidden"
             >
               <span
-                className={`absolute h-px w-6 bg-dark transition-all duration-500 ${
-                  open ? "rotate-45" : "-translate-y-[4px]"
+                className={`absolute h-px w-6 transition-all duration-500 ${
+                  open
+                    ? "rotate-45 bg-dark"
+                    : `-translate-y-[4px] ${isDarkHeader ? "bg-white" : "bg-dark"}`
                 }`}
               />
               <span
-                className={`absolute h-px w-6 bg-dark transition-all duration-500 ${
-                  open ? "-rotate-45" : "translate-y-[4px]"
+                className={`absolute h-px w-6 transition-all duration-500 ${
+                  open
+                    ? "-rotate-45 bg-dark"
+                    : `translate-y-[4px] ${isDarkHeader ? "bg-white" : "bg-dark"}`
                 }`}
               />
             </button>
