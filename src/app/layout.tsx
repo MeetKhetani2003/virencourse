@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Viren Surati — Certified NLP, Mind & Memory Trainer",
     description:
       "Transform your mind, master your voice, own the stage. Courses in memory power, NLP and public speaking.",
-    images: [{ url: "/images/portrait-hero.jpg", width: 1024, height: 1365 }],
+    images: [{ url: "/images/viren-hero-portrait.jpg", width: 1024, height: 1365 }],
   },
 };
 

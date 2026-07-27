@@ -105,12 +105,12 @@ export default function AboutPage() {
             <div className="absolute -inset-4 border border-primary/30" aria-hidden="true" />
             <div className="relative aspect-[16/12] overflow-hidden bg-dark-3">
               <Image
-                src="/images/seminar.png"
-                alt="Viren Surati addressing a seminar audience under warm stage light — placeholder photo"
+                src="/images/viren-seminar-live.jpg"
+                alt="Viren Surati addressing a live seminar audience"
                 fill
                 priority
                 sizes="(max-width: 1024px) 92vw, 560px"
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <CircularBadge

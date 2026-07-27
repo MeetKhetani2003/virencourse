@@ -174,11 +174,11 @@ export default function ContactPage() {
                 <div className="absolute -inset-4 border border-primary/40" aria-hidden="true" />
                 <div className="relative aspect-[4/5] overflow-hidden bg-light-2">
                   <Image
-                    src="/images/portrait-about.jpg"
-                    alt="Viren Surati — personal coaching portrait placeholder"
+                    src="/images/viren-about-portrait.jpg"
+                    alt="Viren Surati — Student Success Coach & Memory Trainer"
                     fill
                     sizes="(max-width: 1024px) 92vw, 440px"
-                    className="object-cover"
+                    className="object-cover object-top"
                   />
                 </div>
               </div>

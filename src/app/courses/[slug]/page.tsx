@@ -348,7 +348,7 @@ export default async function CourseDetailPage({
             <div className="grid gap-6 border border-dark/10 bg-light p-9 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:p-14">
               <div className="relative h-36 w-36 overflow-hidden rounded-full border border-primary/50 lg:h-40 lg:w-40">
                 <Image
-                  src="/images/portrait-about.jpg"
+                  src="/images/viren-hero-portrait.jpg"
                   alt="Viren Surati — course instructor"
                   fill
                   sizes="160px"
