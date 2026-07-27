@@ -303,7 +303,238 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+      <section className="bg-slate-50/80 border-b border-slate-200/70 py-16 lg:py-28">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <Reveal>
+                <p className="micro-label text-blue-600">Learning Offerings</p>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <h2 className="mt-4 font-serif text-3xl font-light text-slate-900 md:text-4xl lg:text-5xl">
+                  Courses Built for <span className="font-normal italic text-blue-600">Real Transformation</span>
+                </h2>
+              </Reveal>
+            </div>
+            <Reveal delay={0.2}>
+              <Link href="/courses" className="btn btn-outline-dark border-slate-300">
+                <span className="btn-wipe" />
+                <span className="relative">View All Courses</span>
+                <ArrowRight className="btn-icon relative h-4 w-4 text-blue-600" />
+              </Link>
+            </Reveal>
+          </div>
 
+          <CourseCarousel>
+            {COURSES.map((course, i) => (
+              <div key={course.slug} className="w-[85vw] md:w-[45vw] lg:w-[400px] snap-center shrink-0">
+                <Reveal delay={0.1 + (i % 3) * 0.12} className="h-full">
+                  <CourseCard course={course} />
+                </Reveal>
+              </div>
+            ))}
+          </CourseCarousel>
+        </div>
+      </section>
+      <section className="bg-slate-900 text-white py-16 lg:py-24 relative overflow-hidden">
+        <div className="pointer-events-none absolute -right-32 top-0 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[140px]" />
+
+        <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <Reveal>
+                <div className="inline-flex items-center gap-2 rounded-full bg-red-600/20 border border-red-500/30 px-3.5 py-1 text-xs font-semibold text-red-400">
+                  <YoutubeIcon className="h-4 w-4 text-red-500" />
+                  <span>YouTube Channel Showcase</span>
+                </div>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <h2 className="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl text-white">
+                  Watch Viren Surati <span className="font-normal italic text-blue-400">In Action</span>
+                </h2>
+              </Reveal>
+            </div>
+
+            <Reveal delay={0.2}>
+              <a
+                href="https://youtube.com/@studentcoachviren?si=GWncu9bhFayB5uiR"
+                target="_blank"
+                rel="noreferrer"
+                className="btn bg-red-600 hover:bg-red-700 text-white border-0 shadow-lg shadow-red-600/25"
+              >
+                <YoutubeIcon className="h-4 w-4 relative" />
+                <span className="relative">Subscribe on YouTube</span>
+                <ArrowRight className="btn-icon relative h-4 w-4" />
+              </a>
+            </Reveal>
+          </div>
+
+          {/* Embedded Video Grid */}
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {YOUTUBE_VIDEOS.map((vid, idx) => (
+              <Reveal key={vid.id} delay={0.1 * idx}>
+                <div className="rounded-2xl border border-slate-800 bg-slate-800/60 overflow-hidden shadow-lg hover:border-slate-700 transition-colors">
+                  <div className="relative aspect-video w-full bg-slate-950">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${vid.id}`}
+                      title={vid.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full border-0"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-serif text-lg font-semibold text-white leading-snug">
+                      {vid.title}
+                    </h3>
+                    <p className="mt-2 text-xs text-slate-400 leading-relaxed">
+                      {vid.desc}
+                    </p>
+                    <a
+                      href={vid.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 hover:text-blue-300"
+                    >
+                      Watch on YouTube
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="bg-white py-16 lg:py-28">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
+            <div>
+              <Reveal>
+                <p className="micro-label text-blue-600">Trust &amp; Credentials</p>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <h2 className="mt-4 font-serif text-3xl font-light leading-tight text-slate-900 md:text-4xl lg:text-5xl">
+                  Empowering Minds With <span className="font-normal italic text-blue-600">Proven Expertise</span>
+                </h2>
+              </Reveal>
+              <Reveal delay={0.2}>
+                <p className="mt-6 text-base leading-relaxed text-slate-600">
+                  Viren Surati is a renowned educational coach committed to helping students, parents, and working professionals unlock their subconscious mind power and overcome psychological limitations.
+                </p>
+              </Reveal>
+
+              {/* Roles Badge Grid */}
+              <Reveal delay={0.35}>
+                <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {[
+                    "Professional Certified NLP Trainer",
+                    "Student Success Coach",
+                    "Mind & Memory Trainer",
+                    "Motivational Speaker",
+                  ].map((role) => (
+                    <div
+                      key={role}
+                      className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5"
+                    >
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0" />
+                      <span className="text-xs font-semibold uppercase tracking-wider text-slate-800">
+                        {role}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+
+              {/* Stat Counters */}
+              <Reveal delay={0.45}>
+                <div className="mt-10 grid grid-cols-2 gap-6 border-t border-slate-100 pt-8 sm:grid-cols-3">
+                  <div>
+                    <p className="font-serif text-3xl font-bold text-slate-900">
+                      <CountUp to={STATS.peopleReached} suffix="+" />
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-slate-500 uppercase tracking-wider">
+                      People Reached
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-serif text-3xl font-bold text-slate-900">
+                      <CountUp to={STATS.directStudents} suffix="+" />
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-slate-500 uppercase tracking-wider">
+                      Direct Students
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-serif text-3xl font-bold text-slate-900">
+                      <CountUp to={STATS.rating} decimals={1} suffix="★" />
+                    </p>
+                    <p className="mt-1 text-xs font-medium text-slate-500 uppercase tracking-wider">
+                      Instructor Rating
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+            </div>
+
+
+            {/* About Image Frame */}
+            <Reveal delay={0.3} className="relative mx-auto w-full max-w-[480px]">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl">
+                <Image
+                  src="/images/viren-about-portrait.jpg"
+                  alt="Viren Surati conducting interactive workshop"
+                  fill
+                  sizes="(max-width: 1024px) 88vw, 480px"
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-4 rounded-2xl bg-blue-600 p-5 text-white shadow-xl max-w-xs">
+                <p className="font-serif text-base italic leading-snug">
+                  “Technique through transformation — giving every student the key to their memory.”
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Real Seminar Achievements Photo Gallery */}
+          <div className="mt-24">
+            <Reveal>
+              <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                  <p className="micro-label text-blue-600">Real Experience &amp; Seminars</p>
+                  <h3 className="mt-2 font-serif text-2xl md:text-3xl font-light text-slate-900">
+                    Glimpses of <span className="font-normal italic text-blue-600">Live School Workshops</span>
+                  </h3>
+                </div>
+                <p className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
+                  Actual Photographs from Client Seminars
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {GALLERY_IMAGES.map((img, index) => (
+                <Reveal key={img.src} delay={0.08 * index}>
+                  <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[4/3] shadow-sm hover:shadow-md transition-all duration-300">
+                    <Image
+                      src={img.src}
+                      alt={img.title}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-4 text-white">
+                      <p className="font-serif text-sm font-semibold">{img.title}</p>
+                      <p className="text-[11px] text-slate-200 mt-0.5 leading-tight">{img.caption}</p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
       {/* ————— 2 · THREE MAIN CTA SECTIONS ————— */}
       <section className="bg-slate-50/70 border-y border-slate-200/70 py-16 lg:py-24">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
@@ -477,241 +708,12 @@ export default function HomePage() {
       </section>
 
       {/* ————— 3 · TRUST SECTION & REAL ACHIEVEMENTS ————— */}
-      <section className="bg-white py-16 lg:py-28">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
-          <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
-            <div>
-              <Reveal>
-                <p className="micro-label text-blue-600">Trust &amp; Credentials</p>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h2 className="mt-4 font-serif text-3xl font-light leading-tight text-slate-900 md:text-4xl lg:text-5xl">
-                  Empowering Minds With <span className="font-normal italic text-blue-600">Proven Expertise</span>
-                </h2>
-              </Reveal>
-              <Reveal delay={0.2}>
-                <p className="mt-6 text-base leading-relaxed text-slate-600">
-                  Viren Surati is a renowned educational coach committed to helping students, parents, and working professionals unlock their subconscious mind power and overcome psychological limitations.
-                </p>
-              </Reveal>
 
-              {/* Roles Badge Grid */}
-              <Reveal delay={0.35}>
-                <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {[
-                    "Professional Certified NLP Trainer",
-                    "Student Success Coach",
-                    "Mind & Memory Trainer",
-                    "Motivational Speaker",
-                  ].map((role) => (
-                    <div
-                      key={role}
-                      className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50/80 px-4 py-3.5"
-                    >
-                      <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0" />
-                      <span className="text-xs font-semibold uppercase tracking-wider text-slate-800">
-                        {role}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
-
-              {/* Stat Counters */}
-              <Reveal delay={0.45}>
-                <div className="mt-10 grid grid-cols-2 gap-6 border-t border-slate-100 pt-8 sm:grid-cols-3">
-                  <div>
-                    <p className="font-serif text-3xl font-bold text-slate-900">
-                      <CountUp to={STATS.peopleReached} suffix="+" />
-                    </p>
-                    <p className="mt-1 text-xs font-medium text-slate-500 uppercase tracking-wider">
-                      People Reached
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-serif text-3xl font-bold text-slate-900">
-                      <CountUp to={STATS.directStudents} suffix="+" />
-                    </p>
-                    <p className="mt-1 text-xs font-medium text-slate-500 uppercase tracking-wider">
-                      Direct Students
-                    </p>
-                  </div>
-                  <div>
-                    <p className="font-serif text-3xl font-bold text-slate-900">
-                      <CountUp to={STATS.rating} decimals={1} suffix="★" />
-                    </p>
-                    <p className="mt-1 text-xs font-medium text-slate-500 uppercase tracking-wider">
-                      Instructor Rating
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            </div>
-
-            {/* About Image Frame */}
-            <Reveal delay={0.3} className="relative mx-auto w-full max-w-[480px]">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-slate-200 bg-slate-100 shadow-xl">
-                <Image
-                  src="/images/viren-about-portrait.jpg"
-                  alt="Viren Surati conducting interactive workshop"
-                  fill
-                  sizes="(max-width: 1024px) 88vw, 480px"
-                  className="object-cover object-top"
-                />
-              </div>
-              <div className="absolute -bottom-6 -right-4 rounded-2xl bg-blue-600 p-5 text-white shadow-xl max-w-xs">
-                <p className="font-serif text-base italic leading-snug">
-                  “Technique through transformation — giving every student the key to their memory.”
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          {/* Real Seminar Achievements Photo Gallery */}
-          <div className="mt-24">
-            <Reveal>
-              <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-                <div>
-                  <p className="micro-label text-blue-600">Real Experience &amp; Seminars</p>
-                  <h3 className="mt-2 font-serif text-2xl md:text-3xl font-light text-slate-900">
-                    Glimpses of <span className="font-normal italic text-blue-600">Live School Workshops</span>
-                  </h3>
-                </div>
-                <p className="text-xs uppercase tracking-wider text-slate-400 font-semibold">
-                  Actual Photographs from Client Seminars
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {GALLERY_IMAGES.map((img, index) => (
-                <Reveal key={img.src} delay={0.08 * index}>
-                  <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[4/3] shadow-sm hover:shadow-md transition-all duration-300">
-                    <Image
-                      src={img.src}
-                      alt={img.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex flex-col justify-end p-4 text-white">
-                      <p className="font-serif text-sm font-semibold">{img.title}</p>
-                      <p className="text-[11px] text-slate-200 mt-0.5 leading-tight">{img.caption}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ————— 4 · YOUTUBE VIDEO SHOWCASE ————— */}
-      <section className="bg-slate-900 text-white py-16 lg:py-24 relative overflow-hidden">
-        <div className="pointer-events-none absolute -right-32 top-0 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[140px]" />
 
-        <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div>
-              <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full bg-red-600/20 border border-red-500/30 px-3.5 py-1 text-xs font-semibold text-red-400">
-                  <YoutubeIcon className="h-4 w-4 text-red-500" />
-                  <span>YouTube Channel Showcase</span>
-                </div>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h2 className="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl text-white">
-                  Watch Viren Surati <span className="font-normal italic text-blue-400">In Action</span>
-                </h2>
-              </Reveal>
-            </div>
-
-            <Reveal delay={0.2}>
-              <a
-                href="https://youtube.com/@studentcoachviren?si=GWncu9bhFayB5uiR"
-                target="_blank"
-                rel="noreferrer"
-                className="btn bg-red-600 hover:bg-red-700 text-white border-0 shadow-lg shadow-red-600/25"
-              >
-                <YoutubeIcon className="h-4 w-4 relative" />
-                <span className="relative">Subscribe on YouTube</span>
-                <ArrowRight className="btn-icon relative h-4 w-4" />
-              </a>
-            </Reveal>
-          </div>
-
-          {/* Embedded Video Grid */}
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {YOUTUBE_VIDEOS.map((vid, idx) => (
-              <Reveal key={vid.id} delay={0.1 * idx}>
-                <div className="rounded-2xl border border-slate-800 bg-slate-800/60 overflow-hidden shadow-lg hover:border-slate-700 transition-colors">
-                  <div className="relative aspect-video w-full bg-slate-950">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${vid.id}`}
-                      title={vid.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 h-full w-full border-0"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-serif text-lg font-semibold text-white leading-snug">
-                      {vid.title}
-                    </h3>
-                    <p className="mt-2 text-xs text-slate-400 leading-relaxed">
-                      {vid.desc}
-                    </p>
-                    <a
-                      href={vid.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 hover:text-blue-300"
-                    >
-                      Watch on YouTube
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </a>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ————— 5 · FEATURED ONLINE COURSES ————— */}
-      <section className="bg-slate-50/80 border-b border-slate-200/70 py-16 lg:py-28">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <Reveal>
-                <p className="micro-label text-blue-600">Learning Offerings</p>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h2 className="mt-4 font-serif text-3xl font-light text-slate-900 md:text-4xl lg:text-5xl">
-                  Courses Built for <span className="font-normal italic text-blue-600">Real Transformation</span>
-                </h2>
-              </Reveal>
-            </div>
-            <Reveal delay={0.2}>
-              <Link href="/courses" className="btn btn-outline-dark border-slate-300">
-                <span className="btn-wipe" />
-                <span className="relative">View All Courses</span>
-                <ArrowRight className="btn-icon relative h-4 w-4 text-blue-600" />
-              </Link>
-            </Reveal>
-          </div>
-
-          <CourseCarousel>
-            {COURSES.map((course, i) => (
-              <div key={course.slug} className="w-[85vw] md:w-[45vw] lg:w-[400px] snap-center shrink-0">
-                <Reveal delay={0.1 + (i % 3) * 0.12} className="h-full">
-                  <CourseCard course={course} />
-                </Reveal>
-              </div>
-            ))}
-          </CourseCarousel>
-        </div>
-      </section>
 
       {/* ————— 6 · METHODOLOGY ————— */}
       <section className="bg-white py-16 lg:py-28 border-b border-slate-100">
@@ -751,7 +753,7 @@ export default function HomePage() {
       {/* ————— 7 · FINAL CTA BANNER ————— */}
       <section className="bg-blue-600 text-white py-20 text-center relative overflow-hidden">
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-[120px]" />
-        
+
         <div className="relative mx-auto max-w-3xl px-6">
           <Reveal>
             <p className="text-xs font-bold uppercase tracking-widest text-blue-200">
