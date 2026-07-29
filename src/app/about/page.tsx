@@ -302,15 +302,13 @@ export default function AboutPage() {
       {/* ————— 6 · MISSION ————— */}
       <section className="grain relative overflow-hidden bg-dark py-20 text-center text-surface lg:py-40">
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.08] blur-[130px]" />
-        <div className="relative mx-auto max-w-3xl px-6">
+        <div className="relative mx-auto max-w-4xl px-6">
           <Reveal>
             <span className="font-serif text-6xl leading-none text-primary">“</span>
           </Reveal>
           <Reveal delay={0.12}>
-            <p className="font-serif text-[clamp(1.9rem,4.4vw,3.2rem)] font-light leading-[1.28] tracking-[-0.015em]">
-              My mission is simple — to help people{" "}
-              <em className="italic text-primary">worldwide</em> transform their
-              lives through practical, life-changing techniques.
+            <p className="font-serif text-[clamp(1.4rem,3vw,2.2rem)] font-light leading-[1.4] tracking-[-0.015em]">
+              My mission is to transform 1 million lives by helping students and individuals unlock their true potential, overcome limiting beliefs, achieve financial awareness, and build a life of confidence, purpose, and success through NLP, practical education, and life-changing coaching.
             </p>
           </Reveal>
           <Reveal delay={0.28}>

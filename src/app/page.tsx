@@ -186,14 +186,30 @@ export default function HomePage() {
   return (
     <div className="bg-white text-slate-900 selection:bg-blue-600 selection:text-white">
       {/* ————— 1 · HERO SECTION (જે સૌથી પહેલાં દેખાય) ————— */}
-      <section className="relative overflow-hidden bg-white pb-16 pt-24 lg:pb-28 lg:pt-36">
+      <section className="relative overflow-hidden bg-white pb-16 pt-32 lg:pb-28 lg:pt-40">
         {/* Subtle background glow */}
         <div className="pointer-events-none absolute -right-40 -top-20 h-[600px] w-[600px] rounded-full bg-blue-500/10 blur-[130px]" />
         <div className="pointer-events-none absolute -left-40 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-600/5 blur-[120px]" />
 
-        <div className="relative mx-auto grid max-w-[1280px] items-center gap-12 px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-10">
-          {/* Left Column: Headline & Bio */}
-          <div>
+        <div className="relative mx-auto grid max-w-[1280px] items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
+          
+          {/* Left Column: Hero Portrait */}
+          <Reveal delay={0.25} y={24} className="relative mx-auto w-full max-w-[500px] order-2 lg:order-1">
+            <div className="relative overflow-hidden rounded-[2rem] bg-white p-2 shadow-2xl shadow-slate-300/50 border border-slate-200/60">
+              <Image
+                src="/images/GirdHero.png"
+                alt="10 Photos Album"
+                width={1200}
+                height={800}
+                priority
+                sizes="(max-width: 1024px) 88vw, 500px"
+                className="w-full h-auto rounded-[1.5rem] object-cover"
+              />
+            </div>
+          </Reveal>
+
+          {/* Right Column: Headline & Bio */}
+          <div className="order-1 lg:order-2">
             <Reveal>
               <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50/80 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-700">
                 <Sparkles className="h-3.5 w-3.5" />
@@ -202,58 +218,47 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={0.15}>
-              <h1 className="mt-6 font-serif text-[clamp(2.5rem,5.5vw,4.8rem)] font-light leading-[1.08] tracking-tight text-slate-900">
-                <span className="block font-medium text-blue-600">Viren Surati</span>
+              <h1 className="mt-6 font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[1.08] tracking-tight text-slate-900">
+                <span className="block font-medium text-blue-600 mb-2">Viren Surti</span>
                 <span className="block text-xl md:text-2xl font-sans font-semibold tracking-wider uppercase text-slate-500 mt-1 mb-4">
                   Student Success Coach
                 </span>
-                Transform Your Child&apos;s Future with{" "}
-                <em className="font-normal italic text-blue-600">
-                  Mind &amp; Memory Training
-                </em>
               </h1>
             </Reveal>
 
-            <Reveal delay={0.3}>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-600">
-                Helping students improve their{" "}
-                <strong className="text-slate-900 font-semibold">
-                  Memory power, Confidence, Focus, Study Skills
-                </strong>{" "}
-                and Performance through NLP-based Techniques, Seminars and Courses.
+            <Reveal delay={0.35}>
+              <p className="mt-6 max-w-xl text-lg md:text-xl leading-relaxed text-slate-600">
+                Transform Your Child&apos;s Future with <em className="font-normal italic text-blue-600">Mind &amp; Memory Training.</em> Helping students improve their <strong className="text-slate-900 font-semibold">Memory power, Confidence, Focus, Study Skills</strong> and Performance.
               </p>
             </Reveal>
 
             {/* Direct CTAs */}
-            <Reveal delay={0.45}>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Reveal delay={0.5}>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
                 <a
                   href={SCHOOL_SEMINAR_WA}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn btn-primary shadow-lg shadow-blue-500/20"
+                  className="btn btn-primary px-8 py-4 text-base font-semibold shadow-lg shadow-blue-500/20"
                 >
-                  <span className="btn-wipe" />
-                  <GraduationCap className="h-4 w-4 relative" />
-                  <span className="relative">Book Seminar Now</span>
-                  <ArrowRight className="btn-icon relative h-4 w-4" />
+                  <GraduationCap className="h-5 w-5 relative mr-2" />
+                  <span className="relative">Book Seminar</span>
                 </a>
 
                 <a
                   href={ONE_TO_ONE_WA}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn btn-outline-dark border-slate-300 hover:border-slate-800"
+                  className="btn bg-[#8b5cf6] hover:bg-[#7c3aed] text-white px-8 py-4 text-base font-semibold shadow-lg shadow-purple-500/20 border-0 transition-all"
                 >
-                  <span className="btn-wipe" />
-                  <PhoneCall className="h-4 w-4 relative text-blue-600" />
-                  <span className="relative">Schedule a Call</span>
+                  <PhoneCall className="h-5 w-5 relative mr-2 text-white/80" />
+                  <span className="relative">Book a call — Let's talk</span>
                 </a>
               </div>
             </Reveal>
 
-            <Reveal delay={0.6}>
-              <div className="mt-8 flex flex-wrap items-center gap-6 border-t border-slate-100 pt-6 text-sm text-slate-500">
+            <Reveal delay={0.65}>
+              <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-slate-100 pt-6 text-sm text-slate-500">
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
                   <span>
@@ -268,141 +273,82 @@ export default function HomePage() {
             </Reveal>
           </div>
 
-          {/* Right Column: Hero Portrait */}
-          <Reveal delay={0.3} y={24} className="relative mx-auto w-full max-w-[440px]">
-            <div className="relative">
-              {/* Decorative Arch Border */}
-              <div className="absolute -inset-3 rounded-t-full border-2 border-blue-600/20" aria-hidden="true" />
-              <div className="relative aspect-[3/4] overflow-hidden rounded-t-full bg-slate-100 shadow-2xl">
-                <Image
-                  src="/images/viren-hero-portrait.jpg"
-                  alt="Viren Surati — Student Success Coach & Mind Memory Trainer"
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 88vw, 440px"
-                  className="object-cover object-top"
-                />
-              </div>
-
-              {/* Rotating Circular Badge */}
-              <CircularBadge
-                text="MIND · MEMORY · SUCCESS · CONFIDENCE · "
-                className="absolute -right-6 -top-6 h-28 w-28 lg:-right-10"
-              />
-
-              {/* Floating Highlight Card */}
-              <div className="absolute -bottom-6 -left-6 rounded-2xl border border-slate-200/80 bg-white p-5 shadow-xl lg:-left-10">
-                <p className="font-serif text-2xl font-bold text-blue-600">
-                  100,000+
-                </p>
-                <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  Students &amp; People Reached
-                </p>
-              </div>
+        </div>
+      </section>
+      {/* ————— 5 · FEATURED ONLINE COURSES ————— */}
+      <section className="bg-slate-900 py-20 lg:py-32 relative overflow-hidden text-white border-y border-slate-800">
+        <div className="pointer-events-none absolute top-0 right-0 h-[600px] w-[600px] rounded-full bg-blue-500/10 blur-[140px]" />
+        
+        <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
+          <Reveal>
+            <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-300 mb-8">
+              <Star className="h-3.5 w-3.5 fill-blue-300" />
+              <span>Featured Course</span>
             </div>
           </Reveal>
-        </div>
-      </section>
-      <section className="bg-slate-50/80 border-b border-slate-200/70 py-16 lg:py-28">
-        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
-          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-            <div>
-              <Reveal>
-                <p className="micro-label text-blue-600">Learning Offerings</p>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h2 className="mt-4 font-serif text-3xl font-light text-slate-900 md:text-4xl lg:text-5xl">
-                  Courses Built for <span className="font-normal italic text-blue-600">Real Transformation</span>
-                </h2>
-              </Reveal>
-            </div>
-            <Reveal delay={0.2}>
-              <Link href="/courses" className="btn btn-outline-dark border-slate-300">
-                <span className="btn-wipe" />
-                <span className="relative">View All Courses</span>
-                <ArrowRight className="btn-icon relative h-4 w-4 text-blue-600" />
-              </Link>
-            </Reveal>
-          </div>
 
-          <CourseCarousel>
-            {COURSES.map((course, i) => (
-              <div key={course.slug} className="w-[85vw] md:w-[45vw] lg:w-[400px] snap-center shrink-0">
-                <Reveal delay={0.1 + (i % 3) * 0.12} className="h-full">
-                  <CourseCard course={course} />
-                </Reveal>
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 items-center">
+            <Reveal delay={0.1}>
+              <h2 className="font-serif text-3xl font-light leading-tight md:text-5xl lg:text-[3.5rem] text-slate-50">
+                Master Your Memory &amp; <span className="font-normal italic text-blue-400">Achieve Success</span>
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-slate-300 max-w-xl">
+                The Ultimate Blueprint of Student Success and Memory Retention Formula. Join thousands of students who have transformed their learning speed, focus, and exam performance.
+              </p>
+
+              <ul className="mt-8 space-y-4 text-base text-slate-200">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-blue-400 shrink-0" />
+                  <span>Advanced Memory Techniques (Pegging, Visualization)</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-blue-400 shrink-0" />
+                  <span>Overcome Exam Anxiety and Build Unshakeable Confidence</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="h-6 w-6 text-blue-400 shrink-0" />
+                  <span>Scientifically Proven NLP Methods for Rapid Learning</span>
+                </li>
+              </ul>
+
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/courses/the-ultimate-blueprint-of-student-success-and-memory-retention-formula"
+                  className="btn bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-base font-semibold border-0 shadow-lg shadow-blue-500/30"
+                >
+                  <span className="relative">View Course Details</span>
+                  <ArrowRight className="btn-icon relative h-5 w-5 ml-2" />
+                </Link>
               </div>
-            ))}
-          </CourseCarousel>
-        </div>
-      </section>
-      <section className="bg-slate-900 text-white py-16 lg:py-24 relative overflow-hidden">
-        <div className="pointer-events-none absolute -right-32 top-0 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[140px]" />
-
-        <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div>
-              <Reveal>
-                <div className="inline-flex items-center gap-2 rounded-full bg-red-600/20 border border-red-500/30 px-3.5 py-1 text-xs font-semibold text-red-400">
-                  <YoutubeIcon className="h-4 w-4 text-red-500" />
-                  <span>YouTube Channel Showcase</span>
-                </div>
-              </Reveal>
-              <Reveal delay={0.1}>
-                <h2 className="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl text-white">
-                  Watch Viren Surati <span className="font-normal italic text-blue-400">In Action</span>
-                </h2>
-              </Reveal>
-            </div>
-
-            <Reveal delay={0.2}>
-              <a
-                href="https://youtube.com/@studentcoachviren?si=GWncu9bhFayB5uiR"
-                target="_blank"
-                rel="noreferrer"
-                className="btn bg-red-600 hover:bg-red-700 text-white border-0 shadow-lg shadow-red-600/25"
-              >
-                <YoutubeIcon className="h-4 w-4 relative" />
-                <span className="relative">Subscribe on YouTube</span>
-                <ArrowRight className="btn-icon relative h-4 w-4" />
-              </a>
             </Reveal>
-          </div>
 
-          {/* Embedded Video Grid */}
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {YOUTUBE_VIDEOS.map((vid, idx) => (
-              <Reveal key={vid.id} delay={0.1 * idx}>
-                <div className="rounded-2xl border border-slate-800 bg-slate-800/60 overflow-hidden shadow-lg hover:border-slate-700 transition-colors">
-                  <div className="relative aspect-video w-full bg-slate-950">
-                    <iframe
-                      src={`https://www.youtube.com/embed/${vid.id}`}
-                      title={vid.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="absolute inset-0 h-full w-full border-0"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-serif text-lg font-semibold text-white leading-snug">
-                      {vid.title}
-                    </h3>
-                    <p className="mt-2 text-xs text-slate-400 leading-relaxed">
-                      {vid.desc}
-                    </p>
-                    <a
-                      href={vid.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 hover:text-blue-300"
-                    >
-                      Watch on YouTube
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </a>
-                  </div>
+            <Reveal delay={0.2} className="relative w-full max-w-[500px] mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-700 bg-slate-800 shadow-2xl">
+                <div className="aspect-[4/3] w-full relative">
+                  <Image
+                    src="/images/courses/the-ultimate-blueprint-of-student-success-and-memory-retention-formula.jpg"
+                    alt="Memory Course"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90" />
                 </div>
-              </Reveal>
-            ))}
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center gap-1 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-slate-900">
+                      <Star className="h-3.5 w-3.5 fill-slate-900" />
+                      4.3 Rating
+                    </div>
+                    <div className="rounded-full bg-slate-800/80 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-slate-200 border border-slate-600">
+                      2,603+ Students
+                    </div>
+                  </div>
+                  <h3 className="font-serif text-xl font-medium text-white leading-snug">
+                    The Ultimate Blueprint of Student Success and Memory Retention Formula
+                  </h3>
+                </div>
+              </div>
+            </Reveal>
           </div>
         </div>
       </section>
@@ -535,6 +481,76 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      <section className="bg-slate-900 text-white py-16 lg:py-24 relative overflow-hidden">
+        <div className="pointer-events-none absolute -right-32 top-0 h-[500px] w-[500px] rounded-full bg-blue-600/10 blur-[140px]" />
+
+        <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+            <div>
+              <Reveal>
+                <div className="inline-flex items-center gap-2 rounded-full bg-red-600/20 border border-red-500/30 px-3.5 py-1 text-xs font-semibold text-red-400">
+                  <YoutubeIcon className="h-4 w-4 text-red-500" />
+                  <span>YouTube Channel Showcase</span>
+                </div>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <h2 className="mt-4 font-serif text-3xl font-light md:text-4xl lg:text-5xl text-white">
+                  Watch Viren Surati <span className="font-normal italic text-blue-400">In Action</span>
+                </h2>
+              </Reveal>
+            </div>
+
+            <Reveal delay={0.2}>
+              <a
+                href="https://youtube.com/@studentcoachviren?si=GWncu9bhFayB5uiR"
+                target="_blank"
+                rel="noreferrer"
+                className="btn bg-red-600 hover:bg-red-700 text-white border-0 shadow-lg shadow-red-600/25"
+              >
+                <YoutubeIcon className="h-4 w-4 relative" />
+                <span className="relative">Subscribe on YouTube</span>
+                <ArrowRight className="btn-icon relative h-4 w-4" />
+              </a>
+            </Reveal>
+          </div>
+
+          {/* Embedded Video Grid */}
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {YOUTUBE_VIDEOS.map((vid, idx) => (
+              <Reveal key={vid.id} delay={0.1 * idx}>
+                <div className="rounded-2xl border border-slate-800 bg-slate-800/60 overflow-hidden shadow-lg hover:border-slate-700 transition-colors">
+                  <div className="relative aspect-video w-full bg-slate-950">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${vid.id}`}
+                      title={vid.title}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 h-full w-full border-0"
+                    />
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-serif text-lg font-semibold text-white leading-snug">
+                      {vid.title}
+                    </h3>
+                    <p className="mt-2 text-xs text-slate-400 leading-relaxed">
+                      {vid.desc}
+                    </p>
+                    <a
+                      href={vid.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-blue-400 hover:text-blue-300"
+                    >
+                      Watch on YouTube
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* ————— 2 · THREE MAIN CTA SECTIONS ————— */}
       <section className="bg-slate-50/70 border-y border-slate-200/70 py-16 lg:py-24">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
@@ -608,51 +624,40 @@ export default function HomePage() {
               <div className="group flex h-full min-h-[580px] lg:min-h-[620px] flex-col justify-between rounded-[2rem] border border-slate-200 bg-white p-10 lg:p-12 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl">
                 <div>
                   <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
-                    <PhoneCall className="h-8 w-8" />
+                    <HeartPulse className="h-8 w-8" />
                   </div>
-                  <h3 className="mt-8 font-serif text-2xl lg:text-3xl font-semibold text-slate-900 leading-tight">
-                    📞 Book One-to-One Talk
+                  <h3 className="mt-8 font-serif text-2xl font-semibold text-slate-900 leading-tight">
+                    Unlock Your Next Level<br />
+                    <span className="text-xl text-blue-600">1-on-1 Personal Coaching</span>
                   </h3>
-                  <p className="mt-4 text-base leading-relaxed text-slate-600">
-                    Personalized 1-on-1 guidance &amp; consultation tailored for:
+                  <p className="mt-4 text-sm leading-relaxed text-slate-600">
+                    Feeling stuck in studies, career, money, or life?<br />
+                    In this private 90-minute coaching session, I'll help you identify your challenges and create a practical action plan using powerful NLP techniques.
                   </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    <span className="rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1 text-xs font-bold text-blue-700">Students</span>
-                    <span className="rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1 text-xs font-bold text-blue-700">Parents</span>
-                    <span className="rounded-full bg-blue-50 border border-blue-100 px-3.5 py-1 text-xs font-bold text-blue-700">Professionals</span>
-                  </div>
-                  <p className="mt-6 text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Dedicated Solutions For:
-                  </p>
-                  <ul className="mt-3 space-y-2.5 text-sm text-slate-700">
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-blue-600 shrink-0" />
-                      <span>Financial &amp; Career Growth Guidance</span>
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-blue-600 shrink-0" />
-                      <span>Mental &amp; Emotional Wellness</span>
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-blue-600 shrink-0" />
-                      <span>Relationship &amp; Family Communication</span>
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <CheckCircle2 className="h-4 w-4 text-blue-600 shrink-0" />
-                      <span>Overcoming Anxiety, Fear &amp; Stress</span>
-                    </li>
+                  <ul className="mt-4 space-y-2 text-sm text-slate-700 font-medium">
+                    <li className="flex items-center gap-2">🎓 Student Success & Study Strategy</li>
+                    <li className="flex items-center gap-2">🧠 Confidence & Mindset</li>
+                    <li className="flex items-center gap-2">💰 Financial Growth Mindset</li>
+                    <li className="flex items-center gap-2">🎯 Goal Setting & Clarity</li>
+                    <li className="flex items-center gap-2">🚀 Career Direction</li>
+                    <li className="flex items-center gap-2">❤️ Personal Life Challenges</li>
+                    <li className="flex items-center gap-2">🔥 Breaking Limiting Beliefs using NLP</li>
                   </ul>
+                  <p className="mt-4 text-xs font-bold text-blue-700">Investment: ₹4,999</p>
                 </div>
 
-                <div className="mt-10 pt-6 border-t border-slate-100">
+                <div className="mt-8 pt-6 border-t border-slate-100">
+                  <p className="text-[11px] italic text-slate-500 mb-4">
+                    "One conversation can change your direction. Let's create your next breakthrough together."
+                  </p>
                   <a
                     href={ONE_TO_ONE_WA}
                     target="_blank"
                     rel="noreferrer"
-                    className="btn btn-outline-dark w-full py-4.5 text-xs font-bold border-slate-300 hover:border-slate-800"
+                    className="btn btn-outline-dark w-full py-4 text-xs font-bold border-slate-300 hover:border-slate-800"
                   >
                     <span className="btn-wipe" />
-                    <span className="relative">Schedule a Call</span>
+                    <span className="relative">Book 1-on-1 Coaching</span>
                     <ArrowRight className="btn-icon relative h-4 w-4 text-blue-600" />
                   </a>
                 </div>
@@ -713,8 +718,39 @@ export default function HomePage() {
       {/* ————— 4 · YOUTUBE VIDEO SHOWCASE ————— */}
 
 
-      {/* ————— 5 · FEATURED ONLINE COURSES ————— */}
+      <section className="bg-slate-50/80 border-b border-slate-200/70 py-16 lg:py-28">
+        <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div>
+              <Reveal>
+                <p className="micro-label text-blue-600">Learning Offerings</p>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <h2 className="mt-4 font-serif text-3xl font-light text-slate-900 md:text-4xl lg:text-5xl">
+                  Courses Built for <span className="font-normal italic text-blue-600">Real Transformation</span>
+                </h2>
+              </Reveal>
+            </div>
+            <Reveal delay={0.2}>
+              <Link href="/courses" className="btn btn-outline-dark border-slate-300">
+                <span className="btn-wipe" />
+                <span className="relative">View All Courses</span>
+                <ArrowRight className="btn-icon relative h-4 w-4 text-blue-600" />
+              </Link>
+            </Reveal>
+          </div>
 
+          <CourseCarousel>
+            {COURSES.map((course, i) => (
+              <div key={course.slug} className="w-[85vw] md:w-[45vw] lg:w-[400px] snap-center shrink-0">
+                <Reveal delay={0.1 + (i % 3) * 0.12} className="h-full">
+                  <CourseCard course={course} />
+                </Reveal>
+              </div>
+            ))}
+          </CourseCarousel>
+        </div>
+      </section>
       {/* ————— 6 · METHODOLOGY ————— */}
       <section className="bg-white py-16 lg:py-28 border-b border-slate-100">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
@@ -747,6 +783,30 @@ export default function HomePage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ————— GOOGLE REVIEW SECTION ————— */}
+      <section className="bg-slate-50 py-16 border-y border-slate-200/60">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <Reveal>
+            <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md border border-slate-100 mb-6">
+              <Star className="h-8 w-8 text-amber-400 fill-amber-400" />
+            </div>
+            <h2 className="font-serif text-3xl text-slate-900">Love our Coaching?</h2>
+            <p className="mt-3 text-slate-600">Your feedback helps us reach and transform more lives. Leave a review on Google and share your success story!</p>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <a
+              href="https://g.page/r/your-google-review-link"
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-bold text-slate-800 shadow-md border border-slate-200 hover:shadow-lg transition-all"
+            >
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" className="h-5 w-5" />
+              Leave a Google Review
+            </a>
+          </Reveal>
         </div>
       </section>
 

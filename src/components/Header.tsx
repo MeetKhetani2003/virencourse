@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { EASE } from "./motion";
@@ -47,16 +48,20 @@ export function Header() {
         <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 lg:px-10">
           {/* Wordmark */}
           <Link href="/" className="group flex items-center gap-3">
-            <span className="hidden h-9 w-9 items-center justify-center border border-primary/60 font-serif text-[13px] font-medium text-primary transition-colors duration-500 group-hover:bg-primary group-hover:text-white sm:flex">
-              VS
-            </span>
+            <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-[1.5px] border-[#3b82f6]">
+              <Image
+                src="/images/logonav.png"
+                alt="Viren Surti Logo"
+                fill
+                className="object-cover"
+              />
+            </div>
             <span
-              className={`font-serif text-lg font-medium tracking-[0.06em] transition-colors duration-300 ${
-                isDarkHeader ? "text-white" : "text-dark"
+              className={`font-sans text-[22px] sm:text-2xl font-bold tracking-tight transition-colors duration-300 ${
+                isDarkHeader ? "text-white" : "text-[#4b55fa]"
               }`}
             >
-              Viren Surati
-              <span className="text-primary">.</span>
+              Viren Surti
             </span>
           </Link>
 
