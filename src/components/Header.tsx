@@ -51,7 +51,7 @@ export function Header() {
             <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border-[1.5px] border-[#3b82f6]">
               <Image
                 src="/images/logonav.png"
-                alt="Viren Surti Logo"
+                alt="Viren Surati Logo"
                 fill
                 className="object-cover"
               />
@@ -61,7 +61,7 @@ export function Header() {
                 isDarkHeader ? "text-white" : "text-[#4b55fa]"
               }`}
             >
-              Viren Surti
+              Viren Surati
             </span>
           </Link>
 

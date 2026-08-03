@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, Mail, Phone } from "lucide-react";
+import { ArrowUpRight, Mail, Phone, HeartPulse, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import { Accordion } from "@/components/Accordion";
 import { ContactForm } from "@/components/ContactForm";
@@ -142,6 +142,83 @@ export default function ContactPage() {
               <p className="mt-8 font-serif text-lg italic text-muted-light">
                 Coming soon
               </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+      {/* ————— 2.5 · ONE TO ONE DETAILS ————— */}
+      <section className="bg-light py-12 lg:py-20 border-t border-dark/5">
+        <div className="mx-auto max-w-[1000px] px-6 lg:px-10">
+          <Reveal>
+            <div className="relative overflow-hidden rounded-[2.5rem] border border-blue-100 bg-white shadow-2xl shadow-blue-900/5 p-8 md:p-14">
+              <div className="absolute top-0 right-0 -mr-20 -mt-20 h-64 w-64 rounded-full bg-blue-50/80 blur-3xl" aria-hidden="true" />
+              
+              <div className="relative z-10 text-center mb-12">
+                <div className="inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 mb-6">
+                  <HeartPulse className="h-8 w-8" />
+                </div>
+                <h2 className="font-serif text-3xl md:text-4xl font-medium text-slate-900 mb-4">
+                  1-on-1 Personal Coaching <span className="text-blue-600">with Viren</span>
+                </h2>
+                <p className="max-w-2xl mx-auto text-[16px] leading-relaxed text-slate-600">
+                  Feeling stuck in studies, career, money, or life? In this private 90-minute coaching session, I'll help you identify your challenges and create a practical action plan using powerful NLP techniques.
+                </p>
+              </div>
+              
+              <div className="relative z-10 grid md:grid-cols-2 gap-10 lg:gap-16 mb-12">
+                <div>
+                  <h3 className="text-[15px] font-bold text-slate-900 mb-5 flex items-center gap-2">
+                    <span className="h-px w-6 bg-blue-600"></span>
+                    I can help you with:
+                  </h3>
+                  <ul className="space-y-3.5 text-[14.5px] text-slate-700 font-medium">
+                    <li className="flex items-start gap-3"><span className="text-xl leading-none">🎓</span> <span>Student Success & Study Strategy</span></li>
+                    <li className="flex items-start gap-3"><span className="text-xl leading-none">🧠</span> <span>Confidence & Mindset</span></li>
+                    <li className="flex items-start gap-3"><span className="text-xl leading-none">💰</span> <span>Financial Growth Mindset</span></li>
+                    <li className="flex items-start gap-3"><span className="text-xl leading-none">🎯</span> <span>Goal Setting & Clarity</span></li>
+                    <li className="flex items-start gap-3"><span className="text-xl leading-none">🚀</span> <span>Career Direction</span></li>
+                    <li className="flex items-start gap-3"><span className="text-xl leading-none">❤️</span> <span>Personal Life Challenges</span></li>
+                    <li className="flex items-start gap-3"><span className="text-xl leading-none">🔥</span> <span>Breaking Limiting Beliefs using NLP</span></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-[15px] font-bold text-slate-900 mb-5 flex items-center gap-2">
+                    <span className="h-px w-6 bg-blue-600"></span>
+                    What You'll Get:
+                  </h3>
+                  <ul className="space-y-4 text-[14.5px] text-slate-700 font-medium">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+                      <span>Personalized Guidance</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+                      <span>Practical Action Plan</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+                      <span>100% Confidential Session</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 shrink-0 mt-0.5" />
+                      <span>NLP-Based Coaching</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="relative z-10 flex flex-col sm:flex-row items-center justify-between p-6 rounded-2xl bg-slate-50 border border-slate-100">
+                <div>
+                  <p className="text-[13px] font-bold uppercase tracking-wider text-slate-500 mb-1">Investment</p>
+                  <p className="text-2xl font-bold text-blue-700">₹4,999</p>
+                </div>
+                <div className="mt-4 sm:mt-0 text-center sm:text-right">
+                  <p className="text-[13px] font-bold text-red-500 bg-red-50 px-3 py-1 rounded-full inline-block">
+                    Limited Slots Every Week
+                  </p>
+                  <p className="text-[12px] text-slate-500 mt-2">Book via the form below</p>
+                </div>
+              </div>
             </div>
           </Reveal>
         </div>

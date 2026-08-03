@@ -113,10 +113,10 @@ const GALLERY_IMAGES = [
 // YouTube Videos provided
 const YOUTUBE_VIDEOS = [
   {
-    id: "i9pPtmEOSIE",
+    id: "i9pPtmEoSIE",
     title: "Student Memory & Concentration Techniques",
     desc: "Watch practical memory tools in action during live school seminars.",
-    url: "https://youtu.be/i9pPtmEoSIE?si=H3PZFFYJwvNx0Enx",
+    url: "https://youtu.be/i9pPtmEoSIE?si=Jxxy0VmBBgOJcCb3",
   },
   {
     id: "L7nZrynHbmQ",
@@ -192,7 +192,7 @@ export default function HomePage() {
         <div className="pointer-events-none absolute -left-40 bottom-0 h-[500px] w-[500px] rounded-full bg-blue-600/5 blur-[120px]" />
 
         <div className="relative mx-auto grid max-w-[1280px] items-center gap-12 px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-10">
-          
+
           {/* Left Column: Hero Portrait */}
           <Reveal delay={0.25} y={24} className="relative mx-auto w-full max-w-[500px] order-2 lg:order-1">
             <div className="relative overflow-hidden rounded-[2rem] bg-white p-2 shadow-2xl shadow-slate-300/50 border border-slate-200/60">
@@ -219,9 +219,9 @@ export default function HomePage() {
 
             <Reveal delay={0.15}>
               <h1 className="mt-6 font-serif text-[clamp(2.5rem,5vw,4.5rem)] font-light leading-[1.08] tracking-tight text-slate-900">
-                <span className="block font-medium text-blue-600 mb-2">Viren Surti</span>
+                <span className="block font-medium text-blue-600 mb-2">Viren Surati</span>
                 <span className="block text-xl md:text-2xl font-sans font-semibold tracking-wider uppercase text-slate-500 mt-1 mb-4">
-                  Student Success Coach
+                  Student Success Coach | Motivational speaker | NLP Trainer
                 </span>
               </h1>
             </Reveal>
@@ -235,25 +235,21 @@ export default function HomePage() {
             {/* Direct CTAs */}
             <Reveal delay={0.5}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
-                <a
-                  href={SCHOOL_SEMINAR_WA}
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
+                  href="/contact"
                   className="btn btn-primary px-8 py-4 text-base font-semibold shadow-lg shadow-blue-500/20"
                 >
                   <GraduationCap className="h-5 w-5 relative mr-2" />
                   <span className="relative">Book Seminar</span>
-                </a>
+                </Link>
 
-                <a
-                  href={ONE_TO_ONE_WA}
-                  target="_blank"
-                  rel="noreferrer"
+                <Link
+                  href="/contact"
                   className="btn bg-[#8b5cf6] hover:bg-[#7c3aed] text-white px-8 py-4 text-base font-semibold shadow-lg shadow-purple-500/20 border-0 transition-all"
                 >
                   <PhoneCall className="h-5 w-5 relative mr-2 text-white/80" />
                   <span className="relative">Book a call — Let's talk</span>
-                </a>
+                </Link>
               </div>
             </Reveal>
 
@@ -262,7 +258,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-2">
                   <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
                   <span>
-                    <strong className="font-semibold text-slate-900">4.3★ Rating</strong> (Udemy &amp; Workshops)
+                    <strong className="font-semibold text-slate-900">4.4★ Rating</strong> (Udemy &amp; Workshops)
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
@@ -278,7 +274,7 @@ export default function HomePage() {
       {/* ————— 5 · FEATURED ONLINE COURSES ————— */}
       <section className="bg-slate-900 py-20 lg:py-32 relative overflow-hidden text-white border-y border-slate-800">
         <div className="pointer-events-none absolute top-0 right-0 h-[600px] w-[600px] rounded-full bg-blue-500/10 blur-[140px]" />
-        
+
         <div className="relative mx-auto max-w-[1280px] px-6 lg:px-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-blue-300 mb-8">
@@ -337,7 +333,7 @@ export default function HomePage() {
                   <div className="flex items-center gap-3 mb-3">
                     <div className="flex items-center gap-1 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-slate-900">
                       <Star className="h-3.5 w-3.5 fill-slate-900" />
-                      4.3 Rating
+                      4.4 Rating
                     </div>
                     <div className="rounded-full bg-slate-800/80 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-slate-200 border border-slate-600">
                       2,603+ Students
@@ -605,16 +601,14 @@ export default function HomePage() {
                 </div>
 
                 <div className="mt-10 pt-6 border-t border-slate-100">
-                  <a
-                    href={SCHOOL_SEMINAR_WA}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn btn-primary w-full py-4.5 text-xs font-bold"
+                  <Link
+                    href="/contact"
+                    className="btn btn-primary w-full py-4 text-xs font-bold"
                   >
                     <span className="btn-wipe" />
                     <span className="relative">Book Seminar Now</span>
                     <ArrowRight className="btn-icon relative h-4 w-4" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Reveal>
@@ -628,38 +622,59 @@ export default function HomePage() {
                   </div>
                   <h3 className="mt-8 font-serif text-2xl font-semibold text-slate-900 leading-tight">
                     Unlock Your Next Level<br />
-                    <span className="text-xl text-blue-600">1-on-1 Personal Coaching</span>
+                    <span className="text-xl text-blue-600">1-on-1 Personal Coaching with Viren Surati</span>
                   </h3>
-                  <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                    Feeling stuck in studies, career, money, or life?<br />
-                    In this private 90-minute coaching session, I'll help you identify your challenges and create a practical action plan using powerful NLP techniques.
-                  </p>
-                  <ul className="mt-4 space-y-2 text-sm text-slate-700 font-medium">
-                    <li className="flex items-center gap-2">🎓 Student Success & Study Strategy</li>
-                    <li className="flex items-center gap-2">🧠 Confidence & Mindset</li>
-                    <li className="flex items-center gap-2">💰 Financial Growth Mindset</li>
-                    <li className="flex items-center gap-2">🎯 Goal Setting & Clarity</li>
-                    <li className="flex items-center gap-2">🚀 Career Direction</li>
-                    <li className="flex items-center gap-2">❤️ Personal Life Challenges</li>
-                    <li className="flex items-center gap-2">🔥 Breaking Limiting Beliefs using NLP</li>
-                  </ul>
-                  <p className="mt-4 text-xs font-bold text-blue-700">Investment: ₹4,999</p>
+
+                  <div className="mt-4 space-y-4">
+                    <p className="text-sm leading-relaxed text-slate-600">
+                      Feeling stuck in studies, career, money, or life?<br />
+                      In this private 90-minute coaching session, I'll help you identify your challenges and create a practical action plan using powerful NLP techniques.
+                    </p>
+                    
+                    <div>
+                      <h4 className="text-sm font-semibold text-slate-900">I can help you with:</h4>
+                      <ul className="mt-2 space-y-1.5 text-sm text-slate-700 font-medium">
+                        <li className="flex items-center gap-2">🎓 Student Success & Study Strategy</li>
+                        <li className="flex items-center gap-2">🧠 Confidence & Mindset</li>
+                        <li className="flex items-center gap-2">💰 Financial Growth Mindset</li>
+                        <li className="flex items-center gap-2">🎯 Goal Setting & Clarity</li>
+                        <li className="flex items-center gap-2">🚀 Career Direction</li>
+                        <li className="flex items-center gap-2">❤️ Personal Life Challenges</li>
+                        <li className="flex items-center gap-2">🔥 Breaking Limiting Beliefs using NLP</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-sm font-semibold text-slate-900">What You'll Get:</h4>
+                      <ul className="mt-2 space-y-1.5 text-sm text-slate-700 font-medium">
+                        <li className="flex items-center gap-2">✔️ Personalized Guidance</li>
+                        <li className="flex items-center gap-2">✔️ Practical Action Plan</li>
+                        <li className="flex items-center gap-2">✔️ 100% Confidential Session</li>
+                        <li className="flex items-center gap-2">✔️ NLP-Based Coaching</li>
+                      </ul>
+                    </div>
+                    
+                    <p className="text-[13px] font-bold text-blue-700">Investment: ₹4,999</p>
+                  </div>
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-slate-100">
-                  <p className="text-[11px] italic text-slate-500 mb-4">
-                    "One conversation can change your direction. Let's create your next breakthrough together."
-                  </p>
-                  <a
-                    href={ONE_TO_ONE_WA}
-                    target="_blank"
-                    rel="noreferrer"
+                  <div className="mb-4 text-center">
+                    <p className="text-[11px] font-semibold uppercase tracking-wider text-red-500 mb-1">
+                      Limited Slots Every Week
+                    </p>
+                    <p className="text-[11px] italic text-slate-500">
+                      "One conversation can change your direction. Let's create your next breakthrough together."
+                    </p>
+                  </div>
+                  <Link
+                    href="/contact"
                     className="btn btn-outline-dark w-full py-4 text-xs font-bold border-slate-300 hover:border-slate-800"
                   >
                     <span className="btn-wipe" />
-                    <span className="relative">Book 1-on-1 Coaching</span>
+                    <span className="relative">Book Your 1-on-1 Coaching Session</span>
                     <ArrowRight className="btn-icon relative h-4 w-4 text-blue-600" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Reveal>
@@ -833,23 +848,21 @@ export default function HomePage() {
 
           <Reveal delay={0.35}>
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                href="/contact"
                 className="btn bg-white text-blue-700 hover:bg-slate-100 px-8 py-4 text-xs font-bold shadow-xl border-0"
               >
-                <span className="relative">Talk to Viren on WhatsApp</span>
+                <span className="relative">Talk to Viren</span>
                 <ArrowRight className="btn-icon relative h-4 w-4" />
-              </a>
+              </Link>
 
-              <a
-                href={`tel:${PHONE_DISPLAY.replace(/\s+/g, "")}`}
+              <Link
+                href="/contact"
                 className="btn bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 text-xs font-bold border border-blue-400/30"
               >
                 <PhoneCall className="h-4 w-4 relative" />
                 <span className="relative">Call: {PHONE_DISPLAY}</span>
-              </a>
+              </Link>
             </div>
           </Reveal>
         </div>

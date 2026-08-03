@@ -27,7 +27,7 @@ export const STATS = {
   peopleReached: 100000,
   directStudents: 3000,
   coursesLive: 7,
-  rating: 4.3,
+  rating: 4.4,
   reviews: 73,
   udemyStudents: 2603,
 };
@@ -106,7 +106,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -117,9 +117,28 @@ export const COURSES: Course[] = [
       "You will learn from an expert instructor and gain valuable insights."
     ],
     learn: [
-      "Core principles and fundamentals",
-      "Advanced techniques",
-      "Practical applications"
+      "How our mind learn anything very easily",
+      "How to Memorize 10x faster",
+      "Remember long answer",
+      "Memorize Scientific words",
+      "memorize Periodic Table easy way",
+      "memorize tables",
+      "Remember war & Years",
+      "Memorize MCQ",
+      "Memorize Properties",
+      "Memorizing Map",
+      "Revision & Break Technique",
+      "Remember Cubes",
+      "Remember Invention & Inventors",
+      "Memorize Books & Authors",
+      "How our Mind create results in our life",
+      "Save yourselves for Negative Comments",
+      "Develop Rock-solid Confidence for Exam",
+      "Erase past painful memories",
+      "Develop Positive State of Mind",
+      "Create better Self Image",
+      "Repair Your Past & Prepare your bright Future",
+      "Mute Unwanted Internal Sounds",
     ],
     curriculumIsOutline: true,
     modules: [],
@@ -135,7 +154,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -157,7 +176,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -186,7 +205,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -208,7 +227,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -237,7 +256,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -259,7 +278,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -288,7 +307,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -310,7 +329,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -339,7 +358,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -361,7 +380,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -390,7 +409,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -412,7 +431,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -441,7 +460,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -463,7 +482,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -492,7 +511,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"
@@ -514,7 +533,7 @@ export const COURSES: Course[] = [
     },
     tags: ["All Levels"],
     hook: "Join this amazing course to master your skills.",
-    cardMeta: ["Instructor Rating 4.3★", "2,603+ Students"],
+    cardMeta: ["Instructor Rating 4.4★", "2,603+ Students"],
     outcomeBullets: [
       "Improve your skills",
       "Learn new techniques",
@@ -543,7 +562,7 @@ export const COURSES: Course[] = [
     ],
     requirements: ["Internet connection", "A willingness to learn"],
     instructorStats: [
-      "4.3 Instructor Rating",
+      "4.4 Instructor Rating",
       "73 Reviews",
       "2,603 Students",
       "7 Courses"

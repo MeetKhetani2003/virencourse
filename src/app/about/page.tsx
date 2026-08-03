@@ -114,7 +114,7 @@ export default function AboutPage() {
               />
             </div>
             <CircularBadge
-              text="TRAIN · TRANSFORM · SPEAK · REMEMBER · "
+              text="UNLOCK · BELIEVE · ACHIEVE · "
               className="absolute -bottom-9 -left-7 h-24 w-24"
             />
           </Reveal>
@@ -172,7 +172,7 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={0.24}>
               <p>
-                Today, with 7 courses live and a 4.3★ instructor rating from
+                Today, with 7 courses live and a 4.4★ instructor rating from
                 learners on Udemy, the work has only scaled — the promise
                 hasn&apos;t changed: <em className="font-serif italic text-dark">practical,
                 life-changing technique over theory. Always.</em>
