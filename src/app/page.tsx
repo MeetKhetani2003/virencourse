@@ -286,7 +286,7 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 items-center">
             <Reveal delay={0.1}>
               <h2 className="font-serif text-3xl font-light leading-tight md:text-5xl lg:text-[3.5rem] text-slate-50">
-                Master Your Memory &amp; <span className="font-normal italic text-blue-400">Achieve Success</span>
+                Train Your Brain for Success &amp; <span className="font-normal italic text-blue-400">Powerful Memory & NLP Techniques for Students</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-slate-300 max-w-xl">
                 The Ultimate Blueprint of Student Success and Memory Retention Formula. Join thousands of students who have transformed their learning speed, focus, and exam performance.
@@ -319,27 +319,26 @@ export default function HomePage() {
             </Reveal>
 
             <Reveal delay={0.2} className="relative w-full max-w-[500px] mx-auto">
-              <div className="relative rounded-3xl overflow-hidden border border-slate-700 bg-slate-800 shadow-2xl">
-                <div className="aspect-[4/3] w-full relative">
+              <div className="relative rounded-3xl overflow-hidden border border-slate-700 bg-slate-800 shadow-2xl flex flex-col">
+                <div className="aspect-[16/9] w-full relative">
                   <Image
                     src="/images/courses/the-ultimate-blueprint-of-student-success-and-memory-retention-formula.jpg"
                     alt="Memory Course"
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent opacity-90" />
                 </div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex items-center gap-3 mb-3">
+                <div className="p-6 sm:p-8">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
                     <div className="flex items-center gap-1 rounded-full bg-amber-400 px-3 py-1 text-xs font-bold text-slate-900">
                       <Star className="h-3.5 w-3.5 fill-slate-900" />
                       4.4 Rating
                     </div>
-                    <div className="rounded-full bg-slate-800/80 backdrop-blur-sm px-3 py-1 text-xs font-semibold text-slate-200 border border-slate-600">
+                    <div className="rounded-full bg-slate-700/50 px-3 py-1 text-xs font-semibold text-slate-200 border border-slate-600">
                       2,603+ Students
                     </div>
                   </div>
-                  <h3 className="font-serif text-xl font-medium text-white leading-snug">
+                  <h3 className="font-serif text-xl sm:text-2xl font-medium text-white leading-snug">
                     The Ultimate Blueprint of Student Success and Memory Retention Formula
                   </h3>
                 </div>
@@ -454,11 +453,10 @@ export default function HomePage() {
                 </p>
               </div>
             </Reveal>
-
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {GALLERY_IMAGES.map((img, index) => (
                 <Reveal key={img.src} delay={0.08 * index}>
-                  <div className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 aspect-[4/3] shadow-sm hover:shadow-md transition-all duration-300">
+                  <div className="group relative overflow-hidden rounded-2xl w-full aspect-[4/3] sm:h-96 sm:aspect-auto border border-slate-200 bg-slate-100 shadow-sm hover:shadow-md transition-all duration-300">
                     <Image
                       src={img.src}
                       alt={img.title}
@@ -622,15 +620,15 @@ export default function HomePage() {
                   </div>
                   <h3 className="mt-8 font-serif text-2xl font-semibold text-slate-900 leading-tight">
                     Unlock Your Next Level<br />
-                    <span className="text-xl text-blue-600">1-on-1 Personal Coaching with Viren Surati</span>
+                    <span className="text-xl text-blue-600">1-on-1 Personal Counselling with Viren Surati</span>
                   </h3>
 
                   <div className="mt-4 space-y-4">
                     <p className="text-sm leading-relaxed text-slate-600">
                       Feeling stuck in studies, career, money, or life?<br />
-                      In this private 90-minute coaching session, I'll help you identify your challenges and create a practical action plan using powerful NLP techniques.
+                      In this private 90-minute counselling session, I'll help you identify your challenges and create a practical action plan using powerful NLP techniques.
                     </p>
-                    
+
                     <div>
                       <h4 className="text-sm font-semibold text-slate-900">I can help you with:</h4>
                       <ul className="mt-2 space-y-1.5 text-sm text-slate-700 font-medium">
@@ -643,17 +641,17 @@ export default function HomePage() {
                         <li className="flex items-center gap-2">🔥 Breaking Limiting Beliefs using NLP</li>
                       </ul>
                     </div>
-                    
+
                     <div>
                       <h4 className="text-sm font-semibold text-slate-900">What You'll Get:</h4>
                       <ul className="mt-2 space-y-1.5 text-sm text-slate-700 font-medium">
                         <li className="flex items-center gap-2">✔️ Personalized Guidance</li>
                         <li className="flex items-center gap-2">✔️ Practical Action Plan</li>
                         <li className="flex items-center gap-2">✔️ 100% Confidential Session</li>
-                        <li className="flex items-center gap-2">✔️ NLP-Based Coaching</li>
+                        <li className="flex items-center gap-2">✔️ NLP-Based Counselling</li>
                       </ul>
                     </div>
-                    
+
                     <p className="text-[13px] font-bold text-blue-700">Investment: ₹4,999</p>
                   </div>
                 </div>
@@ -672,7 +670,7 @@ export default function HomePage() {
                     className="btn btn-outline-dark w-full py-4 text-xs font-bold border-slate-300 hover:border-slate-800"
                   >
                     <span className="btn-wipe" />
-                    <span className="relative">Book Your 1-on-1 Coaching Session</span>
+                    <span className="relative">Book Your 1-on-1 Counselling Session</span>
                     <ArrowRight className="btn-icon relative h-4 w-4 text-blue-600" />
                   </Link>
                 </div>
@@ -808,7 +806,7 @@ export default function HomePage() {
             <div className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white shadow-md border border-slate-100 mb-6">
               <Star className="h-8 w-8 text-amber-400 fill-amber-400" />
             </div>
-            <h2 className="font-serif text-3xl text-slate-900">Love our Coaching?</h2>
+            <h2 className="font-serif text-3xl text-slate-900">Love our Counselling?</h2>
             <p className="mt-3 text-slate-600">Your feedback helps us reach and transform more lives. Leave a review on Google and share your success story!</p>
           </Reveal>
           <Reveal delay={0.2}>

@@ -59,9 +59,14 @@ export function CourseCard({ course }: { course: Course }) {
             View Course
             <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" strokeWidth={1.75} />
           </span>
-          <span className="font-serif text-sm italic text-muted-light">
-            {course.platform}
-          </span>
+          <div className="flex flex-col items-end gap-1">
+            {course.price && (
+              <span className="font-bold text-dark text-lg leading-none">{course.price}</span>
+            )}
+            <span className="font-serif text-xs italic text-muted-light leading-none">
+              {course.platform}
+            </span>
+          </div>
         </div>
       </div>
     </article>

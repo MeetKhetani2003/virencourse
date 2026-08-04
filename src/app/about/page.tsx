@@ -308,7 +308,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="font-serif text-[clamp(1.4rem,3vw,2.2rem)] font-light leading-[1.4] tracking-[-0.015em]">
-              My mission is to transform 1 million lives by helping students and individuals unlock their true potential, overcome limiting beliefs, achieve financial awareness, and build a life of confidence, purpose, and success through NLP, practical education, and life-changing coaching.
+              My mission is to transform 1 million lives by helping students and individuals unlock their true potential, overcome limiting beliefs, achieve financial awareness, and build a life of confidence, purpose, and success through NLP, practical education, and life-changing counselling.
             </p>
           </Reveal>
           <Reveal delay={0.28}>

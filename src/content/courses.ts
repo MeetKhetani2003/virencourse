@@ -58,6 +58,7 @@ export interface CourseInclude {
 }
 
 export interface Course {
+  price?: string;
   slug: string;
   title: string;
   shortTitle: string;
@@ -96,6 +97,7 @@ export const CATEGORIES: { id: CourseCategory | "all"; label: string }[] = [
 export const COURSES: Course[] = [
   {
     slug: "the-ultimate-blueprint-of-student-success-and-memory-retention-formula",
+    price: "999₹",
     title: "The Ultimate Blueprint of Student Success and Memory Retention Formula",
     shortTitle: "The Ultimate Blueprint of Student Success and Memory Retention Formula",
     category: "memory",
@@ -160,17 +162,16 @@ export const COURSES: Course[] = [
       "7 Courses"
     ],
     platform: "GuniGuru",
-    enrollUrl: whatsappWith(
-      "Hi Viren, I'm interested in enrolling for 'The Ultimate Blueprint of Student Success and Memory Retention Formula'. Please guide me."
-    )
+    enrollUrl: "https://www.udemy.com/user/viren-surati/?srsltid=AfmBOopNh3GPBT9GLOzFEy5QHsFHaBIrVB_IGlNqJZ8mpcorwVIejQ2Q"
   },
   {
     slug: "untold-secrets",
+    price: "FREE",
     title: "Unlocking the Untold Secrets of Achieving Goals: अनकहे रहस्य",
     shortTitle: "Unlocking the Untold Secrets of Achieving Goals",
     category: "nlp",
     image: {
-      src: "/images/courses/untold-secrets.jpg",
+      src: "/images/courses/untold-secrets.png",
       alt: "Course thumbnail — Unlocking the Untold Secrets of Achieving Goals: अनकहे रहस्य",
       isRemote: false,
     },
@@ -217,11 +218,12 @@ export const COURSES: Course[] = [
   },
   {
     slug: "overcoming-exam-anxiety",
+    price: "100₹",
     title: "Overcoming Exam Anxiety & Building Rock- Solid Confidence",
     shortTitle: "Overcoming Exam Anxiety & Building Rock- Solid Confidence",
     category: "nlp",
     image: {
-      src: "/images/courses/overcoming-exam-anxiety.jpg",
+      src: "/images/courses/overcoming-exam-anxiety.png",
       alt: "Course thumbnail — Overcoming Exam Anxiety & Building Rock- Solid Confidence",
       isRemote: false,
     },
@@ -268,11 +270,12 @@ export const COURSES: Course[] = [
   },
   {
     slug: "transforming-weaknesses",
+    price: "100₹",
     title: "Transforming Weaknesses into Strengths : A Proven Strategy",
     shortTitle: "Transforming Weaknesses into Strengths ",
     category: "nlp",
     image: {
-      src: "/images/courses/transforming-weaknesses.jpg",
+      src: "/images/courses/transforming-weaknesses.png",
       alt: "Course thumbnail — Transforming Weaknesses into Strengths : A Proven Strategy",
       isRemote: false,
     },
@@ -319,11 +322,12 @@ export const COURSES: Course[] = [
   },
   {
     slug: "achieving-success",
+    price: "100₹",
     title: "Achieving Success : \"The Art of Outcome Mastery\" (Hindi)",
     shortTitle: "Achieving Success ",
     category: "nlp",
     image: {
-      src: "/images/courses/achieving-success.jpg",
+      src: "/images/courses/achieving-success.png",
       alt: "Course thumbnail — Achieving Success : \"The Art of Outcome Mastery\" (Hindi)",
       isRemote: false,
     },
@@ -370,11 +374,12 @@ export const COURSES: Course[] = [
   },
   {
     slug: "unlock-your-memory-power",
+    price: "499₹",
     title: "Unlock Your Memory Power :Techniques for Students Success",
     shortTitle: "Unlock Your Memory Power ",
     category: "memory",
     image: {
-      src: "/images/courses/unlock-your-memory-power.jpg",
+      src: "/images/courses/unlock-your-memory-power.png",
       alt: "Course thumbnail — Unlock Your Memory Power :Techniques for Students Success",
       isRemote: false,
     },
@@ -421,11 +426,12 @@ export const COURSES: Course[] = [
   },
   {
     slug: "memorize-periodic-table",
+    price: "300₹",
     title: "Memorize the Periodic Table in 2 Hours :A Step by Step Guide",
     shortTitle: "Memorize the Periodic Table in 2 Hours ",
     category: "memory",
     image: {
-      src: "/images/courses/memorize-periodic-table.jpg",
+      src: "/images/courses/memorize-periodic-table.png",
       alt: "Course thumbnail — Memorize the Periodic Table in 2 Hours :A Step by Step Guide",
       isRemote: false,
     },
@@ -472,11 +478,12 @@ export const COURSES: Course[] = [
   },
   {
     slug: "confident-public-speaker",
+    price: "499₹",
     title: "Becoming a Confident & Compelling Public Speaker : (Hindi)",
     shortTitle: "Becoming a Confident & Compelling Public Speaker ",
     category: "speaking",
     image: {
-      src: "/images/courses/confident-public-speaker.jpg",
+      src: "/images/courses/confident-public-speaker.png",
       alt: "Course thumbnail — Becoming a Confident & Compelling Public Speaker : (Hindi)",
       isRemote: false,
     },
@@ -523,11 +530,12 @@ export const COURSES: Course[] = [
   },
   {
     slug: "mastering-public-speaking",
+    price: "100₹",
     title: "Mastering Public Speaking : The 7 Step Formula (Hindi)",
     shortTitle: "Mastering Public Speaking ",
     category: "speaking",
     image: {
-      src: "/images/courses/mastering-public-speaking.jpg",
+      src: "/images/courses/mastering-public-speaking.png",
       alt: "Course thumbnail — Mastering Public Speaking : The 7 Step Formula (Hindi)",
       isRemote: false,
     },
