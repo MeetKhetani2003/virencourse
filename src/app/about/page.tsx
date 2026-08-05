@@ -53,8 +53,8 @@ const STAT_BAND = [
     to: STATS.rating,
     decimals: 1,
     suffix: "★",
-    label: "Instructor Rating",
-    note: "From 73 reviews and 2,603+ students on Udemy.",
+    label: "Udemy Rating",
+    note: "From 79 reviews and 2,603+ students on Udemy.",
   },
 ];
 
@@ -175,7 +175,7 @@ export default function AboutPage() {
                 Today, with 7 courses live and a 4.4★ instructor rating from
                 learners on Udemy, the work has only scaled — the promise
                 hasn&apos;t changed: <em className="font-serif italic text-dark">practical,
-                life-changing technique over theory. Always.</em>
+                  life-changing technique over theory. Always.</em>
               </p>
             </Reveal>
           </div>
@@ -277,7 +277,7 @@ export default function AboutPage() {
                   Every Viren Surati program rests on a combined approach:
                   Memory Technique on one side, Scientific Mind Technique
                   (NLP) on the other. Memory work trains <span className="text-dark">what you
-                  retain</span> — how a table, a date, a long answer or a
+                    retain</span> — how a table, a date, a long answer or a
                   speech gets encoded so it stays. Mind work trains{" "}
                   <span className="text-dark">the state you perform from</span> — the confidence,
                   the self-image, the inner dialogue running underneath it

@@ -25,10 +25,10 @@ export const whatsappWith = (text: string) =>
 
 export const STATS = {
   peopleReached: 100000,
-  directStudents: 3000,
+  directStudents: 2653,
   coursesLive: 7,
   rating: 4.4,
-  reviews: 73,
+  reviews: 79,
   udemyStudents: 2603,
 };
 
