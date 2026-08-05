@@ -85,6 +85,7 @@ export interface Course {
   instructorStats: string[];
   platform: string;
   enrollUrl: string;
+  buttonName: string;
 }
 
 export const CATEGORIES: { id: CourseCategory | "all"; label: string }[] = [
@@ -162,7 +163,8 @@ export const COURSES: Course[] = [
       "7 Courses"
     ],
     platform: "GuniGuru",
-    enrollUrl: "https://www.udemy.com/user/viren-surati/?srsltid=AfmBOopNh3GPBT9GLOzFEy5QHsFHaBIrVB_IGlNqJZ8mpcorwVIejQ2Q"
+    buttonName: "Enroll Now",
+    enrollUrl: "https://guniguru.com/courses/the-ultimate-blueprint-of-student-success-and-memory-retention-formula?ref=viren",
   },
   {
     slug: "untold-secrets",
@@ -211,6 +213,7 @@ export const COURSES: Course[] = [
       "2,603 Students",
       "7 Courses"
     ],
+    buttonName: "Enroll / Enquire on WhatsApp",
     platform: "Udemy",
     enrollUrl: whatsappWith(
       "Hi Viren, I'm interested in enrolling for 'Unlocking the Untold Secrets of Achieving Goals: अनकहे रहस्य'. Please guide me."
@@ -264,6 +267,7 @@ export const COURSES: Course[] = [
       "7 Courses"
     ],
     platform: "Udemy",
+    buttonName: "Enroll / Enquire on WhatsApp",
     enrollUrl: whatsappWith(
       "Hi Viren, I'm interested in enrolling for 'Overcoming Exam Anxiety & Building Rock- Solid Confidence'. Please guide me."
     )
@@ -297,6 +301,7 @@ export const COURSES: Course[] = [
       "Practical applications"
     ],
     curriculumIsOutline: true,
+    buttonName: "Enroll / Enquire on WhatsApp",
     modules: [],
     includes: [
       { icon: Languages, label: "Taught entirely in Hindi/English" },
@@ -326,6 +331,7 @@ export const COURSES: Course[] = [
     title: "Achieving Success : \"The Art of Outcome Mastery\" (Hindi)",
     shortTitle: "Achieving Success ",
     category: "nlp",
+    buttonName: "Enroll / Enquire on WhatsApp",
     image: {
       src: "/images/courses/achieving-success.png",
       alt: "Course thumbnail — Achieving Success : \"The Art of Outcome Mastery\" (Hindi)",
@@ -377,6 +383,7 @@ export const COURSES: Course[] = [
     price: "499₹",
     title: "Unlock Your Memory Power :Techniques for Students Success",
     shortTitle: "Unlock Your Memory Power ",
+    buttonName: "Enroll / Enquire on WhatsApp",
     category: "memory",
     image: {
       src: "/images/courses/unlock-your-memory-power.png",
@@ -430,6 +437,7 @@ export const COURSES: Course[] = [
     title: "Memorize the Periodic Table in 2 Hours :A Step by Step Guide",
     shortTitle: "Memorize the Periodic Table in 2 Hours ",
     category: "memory",
+    buttonName: "Enroll / Enquire on WhatsApp",
     image: {
       src: "/images/courses/memorize-periodic-table.png",
       alt: "Course thumbnail — Memorize the Periodic Table in 2 Hours :A Step by Step Guide",
@@ -482,6 +490,7 @@ export const COURSES: Course[] = [
     title: "Becoming a Confident & Compelling Public Speaker : (Hindi)",
     shortTitle: "Becoming a Confident & Compelling Public Speaker ",
     category: "speaking",
+    buttonName: "Enroll / Enquire on WhatsApp",
     image: {
       src: "/images/courses/confident-public-speaker.png",
       alt: "Course thumbnail — Becoming a Confident & Compelling Public Speaker : (Hindi)",
@@ -534,6 +543,7 @@ export const COURSES: Course[] = [
     title: "Mastering Public Speaking : The 7 Step Formula (Hindi)",
     shortTitle: "Mastering Public Speaking ",
     category: "speaking",
+    buttonName: "Enroll / Enquire on WhatsApp",
     image: {
       src: "/images/courses/mastering-public-speaking.png",
       alt: "Course thumbnail — Mastering Public Speaking : The 7 Step Formula (Hindi)",

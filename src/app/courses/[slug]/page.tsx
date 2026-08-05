@@ -130,7 +130,7 @@ export default async function CourseDetailPage({
                   className="btn btn-primary"
                 >
                   <span className="btn-wipe" />
-                  <span className="relative">Enroll / Enquire on WhatsApp</span>
+                  <span className="relative">{course.buttonName}</span>
                   <ArrowUpRight className="btn-icon relative h-4 w-4" strokeWidth={1.75} />
                 </a>
                 {course.modules.length > 0 && (
@@ -271,14 +271,14 @@ export default async function CourseDetailPage({
                             </span>
                           )}
                         </li>
-                    ))}
-                  </ul>
-                ),
-              }))}
-            />
-          </Reveal>
-        </div>
-      </section>
+                      ))}
+                    </ul>
+                  ),
+                }))}
+              />
+            </Reveal>
+          </div>
+        </section>
       )}
 
       {/* ————— 6 · COURSE INCLUDES ————— */}
