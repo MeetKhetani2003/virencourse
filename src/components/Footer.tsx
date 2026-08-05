@@ -21,6 +21,14 @@ function YoutubeIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+function FacebookIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </svg>
+  );
+}
+
 function LinkedinIcon(props: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -37,11 +45,11 @@ const LINKS = [
   { label: "Contact", href: "/contact" },
 ];
 
-/* Social links are placeholders — CONFIRM WITH VIREN */
+/* Social links */
 const SOCIALS = [
-  { label: "Instagram", icon: InstagramIcon, href: "#" },
-  { label: "YouTube", icon: YoutubeIcon, href: "#" },
-  { label: "LinkedIn", icon: LinkedinIcon, href: "#" },
+  { label: "Instagram", icon: InstagramIcon, href: "https://www.instagram.com/lifecoachviren?utm_source=qr&igsh=MXN0Z2VnZWh6N2gwOA%3D%3D" },
+  { label: "YouTube", icon: YoutubeIcon, href: "https://youtube.com/@studentcoachviren?si=laK5yRM8xtZjf3dU" },
+  { label: "Facebook", icon: FacebookIcon, href: "https://www.facebook.com/share/14m8gh3aTGJ/" },
 ];
 
 export function Footer() {
@@ -103,6 +111,8 @@ export function Footer() {
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label={social.label}
                   className="text-muted transition-all duration-300 hover:-translate-y-0.5 hover:text-primary"
                 >
