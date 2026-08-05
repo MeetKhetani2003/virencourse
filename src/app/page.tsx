@@ -286,10 +286,12 @@ export default function HomePage() {
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 items-center">
             <Reveal delay={0.1}>
               <h2 className="font-serif text-3xl font-light leading-tight md:text-5xl lg:text-[3.5rem] text-slate-50">
-                Train Your Brain for Success &amp; <span className="font-normal italic text-blue-400">Powerful Memory & NLP Techniques for Students</span>
+                Train Your Brain for Success <span className="font-normal italic text-blue-400">Powerful Memory & NLP Techniques for Students</span>
               </h2>
               <p className="mt-6 text-lg leading-relaxed text-slate-300 max-w-xl">
-                The Ultimate Blueprint of Student Success and Memory Retention Formula. Join thousands of students who have transformed their learning speed, focus, and exam performance.
+                <span className="font-semibold text-yellow-600">
+                  The Ultimate Blueprint of Student Success and Memory Retention Formula.
+                </span>  <br /> Join thousands of students who have transformed their learning speed, focus, and exam performance.
               </p>
 
               <ul className="mt-8 space-y-4 text-base text-slate-200">
@@ -335,7 +337,7 @@ export default function HomePage() {
                       4.4 Rating
                     </div>
                     <div className="rounded-full bg-slate-700/50 px-3 py-1 text-xs font-semibold text-slate-200 border border-slate-600">
-                      2,603+ Students
+                      2,653+ Students
                     </div>
                   </div>
                   <h3 className="font-serif text-xl sm:text-2xl font-medium text-white leading-snug">
@@ -411,7 +413,7 @@ export default function HomePage() {
                       <CountUp to={STATS.rating} decimals={1} suffix="★" />
                     </p>
                     <p className="mt-1 text-xs font-medium text-slate-500 uppercase tracking-wider">
-                      Instructor Rating
+                      Udemy Rating
                     </p>
                   </div>
                 </div>
