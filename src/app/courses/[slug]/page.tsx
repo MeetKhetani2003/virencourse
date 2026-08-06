@@ -14,6 +14,7 @@ import { notFound } from "next/navigation";
 import { Accordion } from "@/components/Accordion";
 import { MaskLine, Reveal } from "@/components/motion";
 import { COURSES, getCourse, whatsappWith } from "@/content/courses";
+import { CourseTestimonials } from "@/components/CourseTestimonials";
 
 export function generateStaticParams() {
   return COURSES.map((course) => ({ slug: course.slug }));
@@ -341,7 +342,10 @@ export default async function CourseDetailPage({
         </div>
       </section>
 
-      {/* ————— 8 · INSTRUCTOR SNIPPET ————— */}
+      {/* ————— 8 · TESTIMONIALS ————— */}
+      <CourseTestimonials />
+
+      {/* ————— 9 · INSTRUCTOR SNIPPET ————— */}
       <section className="bg-light-2 py-16 lg:py-32">
         <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
           <Reveal>
@@ -391,7 +395,7 @@ export default async function CourseDetailPage({
         </div>
       </section>
 
-      {/* ————— 9 · CLOSING CTA ————— */}
+      {/* ————— 10 · CLOSING CTA ————— */}
       <section className="grain relative overflow-hidden bg-dark py-16 text-center text-surface lg:py-32">
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/[0.08] blur-[130px]" />
         <div className="relative mx-auto max-w-2xl px-6">
