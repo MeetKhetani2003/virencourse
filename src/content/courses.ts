@@ -95,32 +95,7 @@ export interface Course {
   platform: string;
   enrollUrl: string;
   buttonName: string;
-    testimonials: [
-      {
-        name: "Ankit",
-        rating: 4,
-        timeAgo: "1 year ago",
-        content: "good"
-      },
-      {
-        name: "Udemy User",
-        rating: 5,
-        timeAgo: "1 year ago",
-        content: "Good Session."
-      },
-      {
-        name: "Sundeep",
-        rating: 5,
-        timeAgo: "1 year ago",
-        content: "good"
-      },
-      {
-        name: "Lalit",
-        rating: 4,
-        timeAgo: "2 years ago",
-        content: "Easy to understand the course in Local language"
-      }
-    ],
+
   testimonials: CourseTestimonial[];
 }
 
