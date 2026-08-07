@@ -57,6 +57,15 @@ export interface CourseInclude {
   label: string;
 }
 
+
+export interface CourseTestimonial {
+  name: string;
+  avatarUrl?: string;
+  rating: number;
+  timeAgo: string;
+  content: string;
+}
+
 export interface Course {
   price?: string;
   slug: string;
@@ -86,6 +95,33 @@ export interface Course {
   platform: string;
   enrollUrl: string;
   buttonName: string;
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
+  testimonials: CourseTestimonial[];
 }
 
 export const CATEGORIES: { id: CourseCategory | "all"; label: string }[] = [
@@ -164,6 +200,32 @@ export const COURSES: Course[] = [
     ],
     platform: "GuniGuru",
     buttonName: "Enroll Now",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     enrollUrl: "https://guniguru.com/courses/the-ultimate-blueprint-of-student-success-and-memory-retention-formula?ref=viren",
   },
   {
@@ -239,6 +301,32 @@ export const COURSES: Course[] = [
       "7 Courses"
     ],
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     platform: "Udemy",
     enrollUrl: whatsappWith(
       "Hi Viren, I'm interested in enrolling for 'Unlocking the Untold Secrets of Achieving Goals: अनकहे रहस्य'. Please guide me."
@@ -312,6 +400,32 @@ export const COURSES: Course[] = [
     ],
     platform: "Udemy",
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     enrollUrl: whatsappWith(
       "Hi Viren, I'm interested in enrolling for 'Overcoming Exam Anxiety & Building Rock- Solid Confidence'. Please guide me."
     )
@@ -350,6 +464,32 @@ export const COURSES: Course[] = [
     ],
     curriculumIsOutline: false,
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     modules: [
       {
         title: "Section 1",
@@ -391,6 +531,32 @@ export const COURSES: Course[] = [
     shortTitle: "Achieving Success ",
     category: "nlp",
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     image: {
       src: "/images/courses/achieving-success.png",
       alt: "Course thumbnail — Achieving Success : \"The Art of Outcome Mastery\" (Hindi)",
@@ -466,6 +632,32 @@ export const COURSES: Course[] = [
     title: "Unlock Your Memory Power :Techniques for Students Success",
     shortTitle: "Unlock Your Memory Power ",
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     category: "memory",
     image: {
       src: "/images/courses/unlock-your-memory-power.png",
@@ -554,6 +746,32 @@ export const COURSES: Course[] = [
     shortTitle: "Memorize the Periodic Table in 2 Hours ",
     category: "memory",
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     image: {
       src: "/images/courses/memorize-periodic-table.png",
       alt: "Course thumbnail — Memorize the Periodic Table in 2 Hours :A Step by Step Guide",
@@ -629,6 +847,32 @@ export const COURSES: Course[] = [
     shortTitle: "Becoming a Confident & Compelling Public Speaker ",
     category: "speaking",
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     image: {
       src: "/images/courses/confident-public-speaker.png",
       alt: "Course thumbnail — Becoming a Confident & Compelling Public Speaker : (Hindi)",
@@ -722,6 +966,32 @@ export const COURSES: Course[] = [
     shortTitle: "Mastering Public Speaking ",
     category: "speaking",
     buttonName: "Enroll / Enquire on WhatsApp",
+    testimonials: [
+      {
+        name: "Ankit",
+        rating: 4,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Udemy User",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "Good Session."
+      },
+      {
+        name: "Sundeep",
+        rating: 5,
+        timeAgo: "1 year ago",
+        content: "good"
+      },
+      {
+        name: "Lalit",
+        rating: 4,
+        timeAgo: "2 years ago",
+        content: "Easy to understand the course in Local language"
+      }
+    ],
     image: {
       src: "/images/courses/mastering-public-speaking.png",
       alt: "Course thumbnail — Mastering Public Speaking : The 7 Step Formula (Hindi)",

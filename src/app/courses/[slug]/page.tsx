@@ -343,7 +343,10 @@ export default async function CourseDetailPage({
       </section>
 
       {/* ————— 8 · TESTIMONIALS ————— */}
-      <CourseTestimonials />
+      <CourseTestimonials 
+        rating={parseFloat(course.instructorStats[0]) || 4.5}
+        testimonials={course.testimonials}
+      />
 
       {/* ————— 9 · INSTRUCTOR SNIPPET ————— */}
       <section className="bg-light-2 py-16 lg:py-32">
